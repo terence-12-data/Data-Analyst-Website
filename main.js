@@ -1,13 +1,15 @@
 const TOOLS=[{num:'01',name:'Pareto Chart',diff:'Beginner',dc:'bg2',use:'Identify top revenue-generating products using the 80/20 rule',time:'60 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business']},{num:'02',name:'Box Plot Analysis',diff:'Intermediate',dc:'by',use:'Detect outliers in sales data and understand distribution',time:'90 mins',status:'Published',sc:'bg2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics']},{num:'03',name:'Waterfall Chart',diff:'Beginner',dc:'bg2',use:'Visualize profit & loss breakdown month by month',time:'45 mins',status:'Published',sc:'bg2',cats:['excel','visualization','finance'],tags:['Excel','Finance','Visualization']},{num:'04',name:'ABC Analysis',diff:'Intermediate',dc:'by',use:'Classify inventory by revenue contribution (A, B, C categories)',time:'75 mins',status:'Published',sc:'bg2',cats:['excel','business','finance'],tags:['Excel','Business','Finance']},{num:'05',name:'Linear Regression',diff:'Advanced',dc:'bv',use:'Predict future sales based on historical trends',time:'120 mins',status:'Published',sc:'bg2',cats:['excel','statistics','business'],tags:['Excel','Statistics','Business']},{num:'06',name:'Power BI KPI Dashboard',diff:'Intermediate',dc:'by',use:'Build an executive-level KPI monitoring dashboard',time:'150 mins',status:'Published',sc:'bg2',cats:['powerbi','visualization','business'],tags:['Power BI','Visualization']},{num:'07',name:'Cohort Analysis',diff:'Advanced',dc:'bv',use:'Track customer retention over time by acquisition cohort',time:'180 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','statistics','business'],tags:['Excel','Business','Statistics']},{num:'08',name:'Control Charts (SPC)',diff:'Advanced',dc:'bv',use:'Monitor manufacturing process quality and detect variations',time:'120 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','statistics'],tags:['Excel','Statistics']},{num:'09',name:'Power BI DAX Mastery',diff:'Advanced',dc:'bv',use:'Write complex DAX measures for business intelligence reporting',time:'200 mins',status:'Coming Soon',sc:'bgr2',cats:['powerbi','business'],tags:['Power BI','Business']}];
-const RESOURCES=[{name:'Excel Templates',desc:'Ready-to-use Excel workbooks for common business analyses',icon:'table-2',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'12 files'},{name:'Practice Datasets',desc:'Clean datasets from real-world scenarios for hands-on practice',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'8 datasets'},{name:'Cheat Sheets',desc:'Quick-reference cards for Excel functions, DAX, and statistics',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)',count:'6 sheets'},{name:'Business Case Studies',desc:'Step-by-step walkthroughs of real analytics business problems',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'5 cases'},{name:'Dashboard Themes',desc:'Professionally designed Power BI and Excel color themes',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'4 themes'},{name:'Icon Packs',desc:'Analytics and business icon sets for your dashboards',icon:'shapes',color:'#06B6D4',bg:'rgba(6,182,212,.1)',count:'200+ icons'}];
+const RESOURCES=[{name:'Excel Templates',desc:'Ready-to-use Excel workbooks for common business analyses',icon:'table-2',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'12 files'},{name:'Practice Datasets',desc:'Clean datasets from real-world scenarios for hands-on practice',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'8 datasets'},{name:'Cheat Sheets',desc:'Quick-reference cards for Excel functions, DAX, and statistics',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)',count:'6 sheets',link:'marketplace.html?cat=cheat-sheets'},{name:'Business Case Studies',desc:'Step-by-step walkthroughs of real analytics business problems',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'5 cases'},{name:'Dashboard Themes',desc:'Professionally designed Power BI and Excel color themes',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'4 themes'},{name:'Icon Packs',desc:'Analytics and business icon sets for your dashboards',icon:'shapes',color:'#06B6D4',bg:'rgba(6,182,212,.1)',count:'200+ icons'}];
 
-// MARKETPLACE — reuses the same real products already listed on index.html (dashboards + resource bundles). No invented items/prices.
+// MARKETPLACE — reuses the same real products already listed on index.html (dashboards + resource bundles), plus real downloadable cheat sheet PDFs.
 const MARKET=[
   {type:'dashboard',cat:'dashboards',name:'FIFA Goals Dashboard',badge:'⚽ Football',badgeClass:'bg2',img:'assets/images/fifa_dashboard.jpg',desc:'A comprehensive football analytics dashboard built in Power BI. Explore global goal statistics, top scorers, and goal trends across major leagues from 2018–2023.',features:['Interactive world map with goal counts','Top scorers & assists leaderboard','Goal trend line chart (2018–2023)','League-wise breakdown','Drill-through filters included'],price:'599',buyUrl:'https://rebellotter.gumroad.com/l/worldcup2026-dashboard',previewCta:'FIFA Goals Dashboard preview'},
   {type:'dashboard',cat:'dashboards',name:'IPL 2024 Dashboard',badge:'🏏 Cricket',badgeClass:'bo',img:'assets/images/ipl_dashboard.jpg',desc:'A deep-dive IPL 2024 season analytics dashboard. Covers batting, bowling, match results, and team performance across all 70 matches of the season.',features:['Top run scorers & strike rates','Team win percentage donut chart','Batsman performance scatter plot','Match-level drill-through','Full season stats coverage'],price:'599',buyUrl:'https://rebellotter.gumroad.com/l/IPLSixesAnalyticsDashboardPowerBI',previewCta:'IPL 2024 Dashboard preview'},
   {type:'resource',cat:'excel-templates',name:'Excel Templates',desc:'Ready-to-use Excel workbooks for common business analyses',icon:'table-2',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'12 files'},
   {type:'resource',cat:'practice-datasets',name:'Practice Datasets',desc:'Clean datasets from real-world scenarios for hands-on practice',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'8 datasets'},
-  {type:'resource',cat:'cheat-sheets',name:'Cheat Sheets',desc:'Quick-reference cards for Excel functions, DAX, and statistics',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)',count:'6 sheets'},
+  {type:'resource',cat:'cheat-sheets',name:'Excel Functions Cheat Sheet',desc:'The 15 functions that cover 90% of everyday spreadsheet work — SUM, IF, VLOOKUP, INDEX+MATCH and more, with plain-English examples.',icon:'file-text',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'2 pages · PDF',diff:'Beginner',diffClass:'bg2',downloadUrl:'assets/pdfs/excel-functions-cheatsheet-beginner.pdf'},
+  {type:'resource',cat:'cheat-sheets',name:'DAX & Power Query Cheat Sheet',desc:'The bridge from Excel into Power BI — Power Query transformations plus core DAX functions like CALCULATE, SUMX, and time intelligence.',icon:'file-text',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',diff:'Intermediate',diffClass:'by',downloadUrl:'assets/pdfs/dax-powerquery-cheatsheet-intermediate.pdf'},
+  {type:'resource',cat:'cheat-sheets',name:'Statistical Analysis Cheat Sheet',desc:'The statistics concepts analysts actually need — correlation vs. causation, hypothesis testing, choosing the right test, and common traps.',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)',count:'3 pages · PDF',diff:'Advanced',diffClass:'bv',downloadUrl:'assets/pdfs/statistics-cheatsheet-advanced.pdf'},
   {type:'resource',cat:'case-studies',name:'Business Case Studies',desc:'Step-by-step walkthroughs of real analytics business problems',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'5 cases'},
   {type:'resource',cat:'dashboard-themes',name:'Dashboard Themes',desc:'Professionally designed Power BI and Excel color themes',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'4 themes'},
   {type:'resource',cat:'icon-packs',name:'Icon Packs',desc:'Analytics and business icon sets for your dashboards',icon:'shapes',color:'#06B6D4',bg:'rgba(6,182,212,.1)',count:'200+ icons'}
@@ -24,7 +26,7 @@ function renderMarket(f='all',s=''){
   if(!fl.length){g.innerHTML='<div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text3)"><p style="font-size:2rem;margin-bottom:12px">🔍</p><p>No products found.</p></div>';return}
   g.innerHTML=fl.map(m=>{
     if(m.type==='dashboard'){
-      return `<div class="dc fi3">
+      return `<div class="dc">
         <div class="dp">
           <img src="${m.img}" alt="${m.name}" loading="lazy" />
           <div class="dpo"></div>
@@ -44,12 +46,16 @@ function renderMarket(f='all',s=''){
         </div>
       </div>`;
     }
-    return `<div class="rc fi3">
+    const diffBadge=m.diff?`<span class="bdg ${m.diffClass}" style="margin-bottom:8px;">${m.diff}</span>`:'';
+    const actionBtn=m.downloadUrl
+      ?`<a href="${m.downloadUrl}" download class="btn bp bsm"><i data-lucide="download"></i> Download</a>`
+      :`<button class="btn bp bsm" data-cta="${m.name}"><i data-lucide="download"></i> Download</button>`;
+    return `<div class="rc">
       <div class="ri" style="background:${m.bg}"><i data-lucide="${m.icon}" style="color:${m.color};width:22px;height:22px"></i></div>
-      <div><div class="rn">${m.name}</div><div class="rd">${m.desc}</div></div>
+      <div>${diffBadge}<div class="rn">${m.name}</div><div class="rd">${m.desc}</div></div>
       <div style="display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:auto">
         <div class="rm"><i data-lucide="file" style="width:13px;height:13px;color:var(--text3)"></i> ${m.count}</div>
-        <button class="btn bp bsm" data-cta="${m.name}"><i data-lucide="download"></i> Download</button>
+        ${actionBtn}
       </div>
     </div>`;
   }).join('');
@@ -102,7 +108,7 @@ function renderResources(){
       <div><div class="rn">${r.name}</div><div class="rd">${r.desc}</div></div>
       <div style="display:flex;align-items:center;justify-content:space-between;width:100%;margin-top:auto">
         <div class="rm"><i data-lucide="file" style="width:13px;height:13px;color:var(--text3)"></i> ${r.count}</div>
-        <button class="btn bp bsm"><i data-lucide="download"></i> Download</button>
+        ${r.link?`<a href="${r.link}" class="btn bp bsm"><i data-lucide="arrow-right"></i> View All</a>`:`<button class="btn bp bsm" data-cta="${r.name}"><i data-lucide="download"></i> Download</button>`}
       </div>
     </div>`).join('');lucide.createIcons();
 }
@@ -328,7 +334,17 @@ function init(){
   if(document.getElementById('tst'))renderTests();
   if(document.getElementById('sk'))renderSkills();
   if(document.getElementById('rag'))renderMini();
-  if(document.getElementById('market-grid'))renderMarket();
+  if(document.getElementById('market-grid')){
+    const urlCat=new URLSearchParams(window.location.search).get('cat');
+    if(urlCat){
+      const pill=document.querySelector(`#mfts .ftb[data-f="${urlCat}"]`);
+      if(pill){
+        document.querySelectorAll('#mfts .ftb').forEach(x=>{x.classList.remove('act');x.setAttribute('aria-selected','false')});
+        pill.classList.add('act');pill.setAttribute('aria-selected','true');
+        renderMarket(urlCat);
+      }else{renderMarket();}
+    }else{renderMarket();}
+  }
   obsv();lucide.createIcons();
 }
 document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();
