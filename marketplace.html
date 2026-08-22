@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketplace | The Analyst's Toolbox — Terence Rebello</title>
+  <meta name="description" content="Browse every dashboard, Excel template, dataset, and resource from The Analyst's Toolbox in one place. Search and filter by category." />
+  <meta name="keywords" content="Terence Rebello, Data Analyst, Power BI, Excel, Dashboard Creator, Analytics, The Analyst's Toolbox, Marketplace" />
+  <meta name="author" content="Terence Rebello" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://terencerebello.com/marketplace.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://terencerebello.com/marketplace.html" />
+  <meta property="og:title" content="Marketplace | The Analyst's Toolbox" />
+  <meta property="og:description" content="Browse every dashboard, Excel template, dataset, and resource from The Analyst's Toolbox in one place." />
+  <meta property="og:image" content="assets/images/hero_bg.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Marketplace | The Analyst's Toolbox" />
+  <meta name="twitter:description" content="Browse every dashboard, Excel template, dataset, and resource in one place." />
+  <meta name="twitter:image" content="assets/images/hero_bg.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="pb" role="progressbar" aria-label="Reading progress"></div>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <div class="ni">
+    <a href="index.html#hero" class="nl"><em>🧰</em> The Analyst's Toolbox</a>
+    <ul class="nv">
+      <li><a href="index.html#hero">Home</a></li>
+      <li><a href="index.html#toolbox">Toolbox</a></li>
+      <li><a href="marketplace.html" class="cur">Marketplace</a></li>
+      <li><a href="index.html#dashboards">Dashboards</a></li>
+      <li><a href="index.html#resources">Free Resources</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#sup">Support</a></li>
+    </ul>
+    <div class="na">
+      <button class="ib" id="sb" aria-label="Search (Ctrl+K)"><i data-lucide="search"></i></button>
+      <button class="ib" id="tt" aria-label="Toggle theme">
+        <i data-lucide="sun" id="il" style="display:none"></i>
+        <i data-lucide="moon" id="id"></i>
+      </button>
+      <button class="hb" id="hb" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <a href="index.html#hero" class="ml">Home</a>
+  <a href="index.html#toolbox" class="ml">Toolbox</a>
+  <a href="marketplace.html" class="ml cur">Marketplace</a>
+  <a href="index.html#dashboards" class="ml">Dashboards</a>
+  <a href="index.html#resources" class="ml">Free Resources</a>
+  <a href="index.html#about" class="ml">About</a>
+  <a href="index.html#contact" class="ml">Contact</a>
+  <a href="index.html#sup" class="ml">Support</a>
+</div>
+
+<!-- COMMAND PALETTE -->
+<div id="co" role="dialog" aria-label="Command palette" aria-modal="true">
+  <div id="cp">
+    <div class="cs">
+      <i data-lucide="search"></i>
+      <input type="text" id="ci" placeholder="Search tools, dashboards, resources..." autocomplete="off" />
+    </div>
+    <div class="cr" id="cr"></div>
+    <div class="cf">
+      <span class="ck"><span class="kbd">↑↓</span> Navigate</span>
+      <span class="ck"><span class="kbd">↵</span> Go</span>
+      <span class="ck"><span class="kbd">Esc</span> Close</span>
+    </div>
+  </div>
+</div>
+
+<!-- MARKETPLACE HERO -->
+<section id="mhero" aria-label="Marketplace" style="padding:160px 0 60px;">
+  <div class="ctn">
+    <div class="sh">
+      <div class="sl">Marketplace</div>
+      <h2 class="st">Everything In<br>One Place.</h2>
+      <p class="ss">Every dashboard, template, dataset, and resource from The Analyst's Toolbox — search or filter by category to find exactly what you need.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETPLACE GRID -->
+<section id="market" aria-label="All Products">
+  <div class="ctn">
+    <div class="tc">
+      <div class="siw">
+        <i data-lucide="search"></i>
+        <input type="text" class="si2" id="mts" placeholder="Search the marketplace..." aria-label="Search marketplace" />
+      </div>
+      <div class="ft" id="mfts" role="tablist">
+        <button class="ftb act" data-f="all" role="tab" aria-selected="true">All</button>
+        <button class="ftb" data-f="dashboards" role="tab">Dashboards</button>
+        <button class="ftb" data-f="excel-templates" role="tab">Excel Templates</button>
+        <button class="ftb" data-f="practice-datasets" role="tab">Practice Datasets</button>
+        <button class="ftb" data-f="cheat-sheets" role="tab">Cheat Sheets</button>
+        <button class="ftb" data-f="case-studies" role="tab">Case Studies</button>
+        <button class="ftb" data-f="dashboard-themes" role="tab">Dashboard Themes</button>
+        <button class="ftb" data-f="icon-packs" role="tab">Icon Packs</button>
+      </div>
+    </div>
+    <div class="dg" id="market-grid"></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="ft" role="contentinfo">
+  <div class="ctn">
+    <div class="ftt">
+      <div>
+        <div class="fbn">🧰 The Analyst's ToolBox</div>
+        <p class="fbd">Making Analytics Simple. Helping professionals solve real business problems using Excel, Power BI and Dashboards.</p>
+        <div style="display:flex;gap:8px;">
+          <a href="https://www.linkedin.com/in/terence-rebello/" target="_blank" rel="noopener" class="ib" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://github.com/terence-12-data" target="_blank" rel="noopener" class="ib" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="fh">Explore</div>
+        <ul class="fl2"><li><a href="index.html#toolbox">The Toolbox</a></li><li><a href="marketplace.html">Marketplace</a></li><li><a href="index.html#dashboards">Dashboards</a></li><li><a href="index.html#resources">Free Resources</a></li><li><a href="index.html#learning-path">Learning Path</a></li></ul>
+      </div>
+      <div>
+        <div class="fh">Tools</div>
+        <ul class="fl2"><li><a href="index.html#toolbox">Pareto Chart</a></li><li><a href="index.html#toolbox">Box Plot</a></li><li><a href="index.html#toolbox">Regression</a></li><li><a href="index.html#toolbox">Waterfall Chart</a></li><li><a href="index.html#toolbox">ABC Analysis</a></li></ul>
+      </div>
+      <div>
+        <div class="fh">Connect</div>
+        <ul class="fl2"><li><a href="index.html#about">About</a></li><li><a href="index.html#work-with-me">Work With Me</a></li><li><a href="index.html#contact">Contact</a></li><li><a href="index.html#sup">Support</a></li><li><a href="index.html#nl">Newsletter</a></li></ul>
+      </div>
+    </div>
+    <div class="fb">
+      <p class="fc2">© 2025 <a href="index.html#hero">The Analyst's ToolBox</a>. Built with ❤️ by <strong>Terence Rebello</strong>.</p>
+      <p class="fc2">Making Analytics Simple.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="toast-wrap" aria-live="polite"></div>
+<button id="btt" aria-label="Back to top"><i data-lucide="arrow-up"></i></button>
+
+<script src="main.js" defer></script>
+</body>
+</html>
