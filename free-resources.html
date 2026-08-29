@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marketplace | The Analyst's Toolbox — Terence Rebello</title>
-  <meta name="description" content="Browse every dashboard from The Analyst's Toolbox in one place — search and filter by category to find what you need." />
-  <meta name="keywords" content="Terence Rebello, Data Analyst, Power BI, Excel, Dashboard Creator, Analytics, The Analyst's Toolbox, Marketplace" />
+  <title>Free Resources | The Analyst's Toolbox — Terence Rebello</title>
+  <meta name="description" content="Free Excel templates, datasets, cheat sheets, and case studies from The Analyst's Toolbox — no paywalls, just value." />
+  <meta name="keywords" content="Terence Rebello, Data Analyst, Power BI, Excel, Dashboard Creator, Analytics, The Analyst's Toolbox, Free Resources" />
   <meta name="author" content="Terence Rebello" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://terencerebello.com/marketplace.html" />
+  <link rel="canonical" href="https://terencerebello.com/free-resources.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://terencerebello.com/marketplace.html" />
-  <meta property="og:title" content="Marketplace | The Analyst's Toolbox" />
-  <meta property="og:description" content="Browse every dashboard from The Analyst's Toolbox in one place." />
+  <meta property="og:url" content="https://terencerebello.com/free-resources.html" />
+  <meta property="og:title" content="Free Resources | The Analyst's Toolbox" />
+  <meta property="og:description" content="Free Excel templates, datasets, cheat sheets, and case studies — no paywalls, just value." />
   <meta property="og:image" content="assets/images/hero_bg.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Marketplace | The Analyst's Toolbox" />
-  <meta name="twitter:description" content="Browse every dashboard in one place." />
+  <meta name="twitter:title" content="Free Resources | The Analyst's Toolbox" />
+  <meta name="twitter:description" content="Free templates, datasets, and cheat sheets — no paywalls." />
   <meta name="twitter:image" content="assets/images/hero_bg.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -35,9 +35,9 @@
     <ul class="nv">
       <li><a href="index.html">Home</a></li>
       <li><a href="toolbox.html">Toolbox</a></li>
-      <li><a href="marketplace.html" class="cur">Marketplace</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
       <!-- <li><a href="index.html#dashboards">Dashboards</a></li> -->
-      <li><a href="free-resources.html">Free Resources</a></li>
+      <li><a href="free-resources.html" class="cur">Free Resources</a></li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#contact">Contact</a></li>
       <li><a href="index.html#sup">Support</a></li>
@@ -57,9 +57,9 @@
 <div class="mm" id="mm">
   <a href="index.html" class="ml">Home</a>
   <a href="toolbox.html" class="ml">Toolbox</a>
-  <a href="marketplace.html" class="ml cur">Marketplace</a>
+  <a href="marketplace.html" class="ml">Marketplace</a>
   <!-- <a href="index.html#dashboards" class="ml">Dashboards</a> -->
-  <a href="free-resources.html" class="ml">Free Resources</a>
+  <a href="free-resources.html" class="ml cur">Free Resources</a>
   <a href="index.html#about" class="ml">About</a>
   <a href="index.html#contact" class="ml">Contact</a>
   <a href="index.html#sup" class="ml">Support</a>
@@ -81,32 +81,36 @@
   </div>
 </div>
 
-<!-- MARKETPLACE HERO -->
-<section id="mhero" aria-label="Marketplace" style="padding:160px 0 60px;">
+<!-- FREE RESOURCES HERO -->
+<section id="frhero" aria-label="Free Resources" style="padding:160px 0 60px;">
   <div class="ctn">
     <div class="sh">
-      <div class="sl">Marketplace</div>
-      <h2 class="st">Premium Dashboards<br>Ready to Use.</h2>
-      <p class="ss">Every paid dashboard from The Analyst's Toolbox — search or filter by category to find exactly what you need.</p>
+      <div class="sl">Free Resources</div>
+      <h2 class="st">Download &amp; Learn<br>For Free</h2>
+      <p class="ss">Practical resources to level up your analytics skills. No paywalls. Just value.</p>
     </div>
   </div>
 </section>
 
-<!-- MARKETPLACE GRID -->
-<section id="market" aria-label="All Dashboards">
+<!-- FREE RESOURCES GRID -->
+<section id="fr" aria-label="All Free Resources">
   <div class="ctn">
     <div class="tc">
       <div class="siw">
         <i data-lucide="search"></i>
-        <input type="text" class="si2" id="mts" placeholder="Search dashboards..." aria-label="Search dashboards" />
+        <input type="text" class="si2" id="rts" placeholder="Search free resources..." aria-label="Search free resources" />
       </div>
-      <div class="ft" id="mfts" role="tablist">
+      <div class="ft" id="rfts" role="tablist">
         <button class="ftb act" data-f="all" role="tab" aria-selected="true">All</button>
-        <button class="ftb" data-f="football" role="tab">Football</button>
-        <button class="ftb" data-f="cricket" role="tab">Cricket</button>
+        <button class="ftb" data-f="excel-templates" role="tab">Excel Templates</button>
+        <button class="ftb" data-f="practice-datasets" role="tab">Practice Datasets</button>
+        <button class="ftb" data-f="cheat-sheets" role="tab">Cheat Sheets</button>
+        <button class="ftb" data-f="case-studies" role="tab">Case Studies</button>
+        <button class="ftb" data-f="dashboard-themes" role="tab">Dashboard Themes</button>
+        <button class="ftb" data-f="icon-packs" role="tab">Icon Packs</button>
       </div>
     </div>
-    <div class="dg" id="market-grid"></div>
+    <div class="rg" id="free-grid"></div>
   </div>
 </section>
 

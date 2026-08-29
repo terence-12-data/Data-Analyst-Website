@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Analyst's Toolbox | Terence Rebello — Data Analyst &amp; Dashboard Creator</title>
-  <meta name="description" content="Terence Rebello is a Data Analyst and Dashboard Creator helping professionals solve real business problems using Excel, Power BI, and Dashboards. Explore The Analyst's Vault." />
-  <meta name="keywords" content="Terence Rebello, Data Analyst, Power BI, Excel, Dashboard Creator, Analytics, The Analyst's Vault" />
+  <meta name="description" content="Terence Rebello is a Data Analyst and Dashboard Creator helping professionals solve business problems using Excel, Power BI, and interactive dashboards." />
+  <meta name="keywords" content="Terence Rebello, Data Analyst, Power BI, Excel, Dashboard Creator, Analytics, The Analyst's Toolbox" />
   <meta name="author" content="Terence Rebello" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="" />
@@ -15,7 +15,7 @@
   <meta property="og:description" content="Making Analytics Simple. Helping professionals solve real business problems using Excel, Power BI and Dashboards." />
   <meta property="og:image" content="assets/images/hero_bg.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Analyst's Vault | Terence Rebello" />
+  <meta name="twitter:title" content="The Analyst's Toolbox | Terence Rebello" />
   <meta name="twitter:description" content="Making Analytics Simple." />
   <meta name="twitter:image" content="assets/images/hero_bg.jpg" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Terence Rebello","url":"https://the-analyst-toolbox.netlify.app/","jobTitle":"Data Analyst & Dashboard Creator","description":"Helping professionals solve real business problems using Excel, Power BI and Dashboards.","sameAs":["https://linkedin.com/in/terencerebello","https://github.com/terencerebello"]}</script>
@@ -32,13 +32,13 @@
 <!-- NAV -->
 <nav id="nav" role="navigation" aria-label="Main navigation">
   <div class="ni">
-    <a href="" class="nl"><em>🧰</em> The Analyst's Toolbox</a>
+    <a href="#" class="nl"><em>🧰</em> The Analyst's Toolbox</a>
     <ul class="nv">
-      <li><a href="">Home</a></li>
-      <li><a href="#toolbox">Toolbox</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="toolbox.html">Toolbox</a></li>
       <li><a href="marketplace.html">Marketplace</a></li>
-      <li><a href="#dashboards">Dashboards</a></li>
-      <li><a href="#resources">Free Resources</a></li>
+      <!-- <li><a href="#dashboards">Dashboards</a></li> -->
+      <li><a href="free-resources.html">Free Resources</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#sup">Support</a></li>
@@ -56,11 +56,11 @@
 
 <!-- MOBILE MENU -->
 <div class="mm" id="mm">
-  <a href="#" class="ml">Home</a>
-  <a href="#toolbox" class="ml">Toolbox</a>
+  <a href="index.html" class="ml">Home</a>
+  <a href="toolbox.html" class="ml">Toolbox</a>
   <a href="marketplace.html" class="ml">Marketplace</a>
-  <a href="#dashboards" class="ml">Dashboards</a>
-  <a href="#resources" class="ml">Free Resources</a>
+  <!-- <a href="#dashboards" class="ml">Dashboards</a> -->
+  <a href="free-resources.html" class="ml">Free Resources</a>
   <a href="#about" class="ml">About</a>
   <a href="#contact" class="ml">Contact</a>
   <a href="#sup" class="ml">Support</a>
@@ -127,22 +127,10 @@
       <h2 class="st">Every Tool You Need<br>to Think Like an Analyst</h2>
       <p class="ss">Curated analytical tools with real business context, datasets, and step-by-step Excel walkthroughs.</p>
     </div>
-    <div class="tc">
-      <div class="siw">
-        <i data-lucide="search"></i>
-        <input type="text" class="si2" id="ts" placeholder="Search tools..." aria-label="Search tools" />
-      </div>
-      <div class="ft" id="fts" role="tablist">
-        <button class="ftb act" data-f="all" role="tab" aria-selected="true">All</button>
-        <button class="ftb" data-f="excel" role="tab">Excel</button>
-        <button class="ftb" data-f="powerbi" role="tab">Power BI</button>
-        <button class="ftb" data-f="statistics" role="tab">Statistics</button>
-        <button class="ftb" data-f="business" role="tab">Business</button>
-        <button class="ftb" data-f="finance" role="tab">Finance</button>
-        <button class="ftb" data-f="visualization" role="tab">Visualization</button>
-      </div>
+    <div class="tg" id="tg-preview"></div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="toolbox.html" class="btn bp"><i data-lucide="arrow-right"></i> View All Tools</a>
     </div>
-    <div class="tg" id="tg"></div>
   </div>
 </section>
 
@@ -439,7 +427,7 @@
     <p class="qr-hint">Scan with GPay, PhonePe, or any UPI app</p>
   </div>
 </div>
-        <button class="supob"><span class="supoi">💳</span><span class="supol">PayPal</span></button>
+        <!-- <button class="supob"><span class="supoi">💳</span><span class="supol">PayPal</span></button> -->
       </div>
     </div>
   </div>
@@ -461,11 +449,11 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
         Gumroad
       </a>
-      <a href="mailto:terence@theanalystsvault.com" class="socb em">
+      <a href="mailto:rebelloterence28@gmail.com" class="socb em">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Email
       </a>
-      <a href="#hero" class="socb pt">
+      <a href="#" class="socb pt">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         Portfolio
       </a>
@@ -530,7 +518,7 @@
       </div>
     </div>
     <div class="fb">
-      <p class="fc2">© 2025 <a href="#hero">The Analyst's ToolBox</a>. Built with ❤️ by <strong>Terence Rebello</strong>.</p>
+      <p class="fc2">© <span class="fyear">2025</span> <a href="index.html">The Analyst's ToolBox</a>. Built with ❤️ by <strong>Terence Rebello</strong>.</p>
       <p class="fc2">Making Analytics Simple.</p>
     </div>
   </div>

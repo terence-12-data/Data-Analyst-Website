@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Marketplace | The Analyst's Toolbox — Terence Rebello</title>
-  <meta name="description" content="Browse every dashboard from The Analyst's Toolbox in one place — search and filter by category to find what you need." />
-  <meta name="keywords" content="Terence Rebello, Data Analyst, Power BI, Excel, Dashboard Creator, Analytics, The Analyst's Toolbox, Marketplace" />
+  <title>Toolbox | The Analyst's Toolbox — Terence Rebello</title>
+  <meta name="description" content="Browse every analytical tool and carousel from The Analyst's Toolbox — search and filter by Excel, Power BI, statistics, and more." />
+  <meta name="keywords" content="Terence Rebello, Data Analyst, Power BI, Excel, Dashboard Creator, Analytics, The Analyst's Toolbox" />
   <meta name="author" content="Terence Rebello" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://terencerebello.com/marketplace.html" />
+  <link rel="canonical" href="https://terencerebello.com/toolbox.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://terencerebello.com/marketplace.html" />
-  <meta property="og:title" content="Marketplace | The Analyst's Toolbox" />
-  <meta property="og:description" content="Browse every dashboard from The Analyst's Toolbox in one place." />
+  <meta property="og:url" content="https://terencerebello.com/toolbox.html" />
+  <meta property="og:title" content="Toolbox | The Analyst's Toolbox" />
+  <meta property="og:description" content="Browse every analytical tool and carousel from The Analyst's Toolbox." />
   <meta property="og:image" content="assets/images/hero_bg.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Marketplace | The Analyst's Toolbox" />
-  <meta name="twitter:description" content="Browse every dashboard in one place." />
+  <meta name="twitter:title" content="Toolbox | The Analyst's Toolbox" />
+  <meta name="twitter:description" content="Browse every analytical tool and carousel in one place." />
   <meta name="twitter:image" content="assets/images/hero_bg.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,8 +34,8 @@
     <a href="index.html" class="nl"><em>🧰</em> The Analyst's Toolbox</a>
     <ul class="nv">
       <li><a href="index.html">Home</a></li>
-      <li><a href="toolbox.html">Toolbox</a></li>
-      <li><a href="marketplace.html" class="cur">Marketplace</a></li>
+      <li><a href="toolbox.html" class="cur">Toolbox</a></li>
+      <li><a href="marketplace.html">Marketplace</a></li>
       <!-- <li><a href="index.html#dashboards">Dashboards</a></li> -->
       <li><a href="free-resources.html">Free Resources</a></li>
       <li><a href="index.html#about">About</a></li>
@@ -56,8 +56,8 @@
 <!-- MOBILE MENU -->
 <div class="mm" id="mm">
   <a href="index.html" class="ml">Home</a>
-  <a href="toolbox.html" class="ml">Toolbox</a>
-  <a href="marketplace.html" class="ml cur">Marketplace</a>
+  <a href="toolbox.html" class="ml cur">Toolbox</a>
+  <a href="marketplace.html" class="ml">Marketplace</a>
   <!-- <a href="index.html#dashboards" class="ml">Dashboards</a> -->
   <a href="free-resources.html" class="ml">Free Resources</a>
   <a href="index.html#about" class="ml">About</a>
@@ -81,32 +81,30 @@
   </div>
 </div>
 
-<!-- MARKETPLACE HERO -->
-<section id="mhero" aria-label="Marketplace" style="padding:160px 0 60px;">
+<!-- TOOLBOX -->
+<section id="toolbox" aria-label="The Analyst's Toolbox" style="padding:160px 0 100px;">
   <div class="ctn">
     <div class="sh">
-      <div class="sl">Marketplace</div>
-      <h2 class="st">Premium Dashboards<br>Ready to Use.</h2>
-      <p class="ss">Every paid dashboard from The Analyst's Toolbox — search or filter by category to find exactly what you need.</p>
+      <div class="sl">The Analyst's Toolbox</div>
+      <h2 class="st">Every Tool You Need<br>to Think Like an Analyst</h2>
+      <p class="ss">Curated analytical tools with real business context, datasets, and step-by-step Excel walkthroughs.</p>
     </div>
-  </div>
-</section>
-
-<!-- MARKETPLACE GRID -->
-<section id="market" aria-label="All Dashboards">
-  <div class="ctn">
     <div class="tc">
       <div class="siw">
         <i data-lucide="search"></i>
-        <input type="text" class="si2" id="mts" placeholder="Search dashboards..." aria-label="Search dashboards" />
+        <input type="text" class="si2" id="ts" placeholder="Search tools..." aria-label="Search tools" />
       </div>
-      <div class="ft" id="mfts" role="tablist">
+      <div class="ft" id="fts" role="tablist">
         <button class="ftb act" data-f="all" role="tab" aria-selected="true">All</button>
-        <button class="ftb" data-f="football" role="tab">Football</button>
-        <button class="ftb" data-f="cricket" role="tab">Cricket</button>
+        <button class="ftb" data-f="excel" role="tab">Excel</button>
+        <button class="ftb" data-f="powerbi" role="tab">Power BI</button>
+        <button class="ftb" data-f="statistics" role="tab">Statistics</button>
+        <button class="ftb" data-f="business" role="tab">Business</button>
+        <button class="ftb" data-f="finance" role="tab">Finance</button>
+        <button class="ftb" data-f="visualization" role="tab">Visualization</button>
       </div>
     </div>
-    <div class="dg" id="market-grid"></div>
+    <div class="tg" id="tg"></div>
   </div>
 </section>
 
