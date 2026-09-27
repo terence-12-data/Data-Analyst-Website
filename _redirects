@@ -1,0 +1,4 @@
+# Defense-in-depth: block direct access to .git if it's ever present in the published folder.
+# (This is a safety net only — the real fix is making sure .git is never part of your Netlify
+# publish directory. See note in the audit about deploy method.)
+/.git/*  /  404

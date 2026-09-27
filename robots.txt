@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://the-analyst-toolbox.netlify.app/sitemap.xml
