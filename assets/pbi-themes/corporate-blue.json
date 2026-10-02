@@ -1,0 +1,23 @@
+{
+  "name": "The Analyst's Toolbox \u2013 Corporate Blue",
+  "dataColors": [
+    "#1D4ED8",
+    "#2563EB",
+    "#3B82F6",
+    "#60A5FA",
+    "#93C5FD",
+    "#1E3A8A",
+    "#0F172A",
+    "#64748B"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#1E293B",
+  "tableAccent": "#1D4ED8",
+  "good": "#16A34A",
+  "bad": "#DC2626",
+  "neutral": "#6B7280",
+  "maximum": "#1D4ED8",
+  "center": "#93C5FD",
+  "minimum": "#DBEAFE",
+  "null": "#E5E7EB"
+}

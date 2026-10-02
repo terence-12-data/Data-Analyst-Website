@@ -1,0 +1,23 @@
+{
+  "name": "The Analyst's Toolbox \u2013 Vibrant Modern",
+  "dataColors": [
+    "#7C3AED",
+    "#EC4899",
+    "#F97316",
+    "#FACC15",
+    "#10B981",
+    "#06B6D4",
+    "#EF4444",
+    "#3B82F6"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#111827",
+  "tableAccent": "#7C3AED",
+  "good": "#10B981",
+  "bad": "#EF4444",
+  "neutral": "#9CA3AF",
+  "maximum": "#7C3AED",
+  "center": "#F97316",
+  "minimum": "#FDE68A",
+  "null": "#E5E7EB"
+}

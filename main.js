@@ -69,6 +69,26 @@ const MARKET=[
     price:'599',
     buyUrl:'https://rebellotter.gumroad.com/l/IPLSixesAnalyticsDashboardPowerBI',
     previewCta:'IPL 2024 Dashboard preview'
+  },
+
+  {
+    type:'dashboard',
+    cat:'hr',
+    name:'HR Attrition Dashboard',
+    badge:'📊 HR Analytics',
+    badgeClass:'bp',
+    img:'assets/images/hr_dashboard.png',
+    desc:'A plug-and-play HR attrition analytics dashboard. Breaks down employee turnover by department, overtime, age group, job role, salary band, and marital status across 1,480 employees.',
+    features:[
+      'Attrition rate by overtime, age & salary band',
+      'Top flight-risk job roles ranked',
+      'Live KPI cards (headcount, income, tenure)',
+      'Key Insights panel with plain-English findings',
+      'Drop-in your own data, auto-recalculates'
+    ],
+    price:'599',
+    buyUrl:'https://rebellotter.gumroad.com/l/hr-attrition-dashboard-excel',
+    previewCta:'HR Attrition Dashboard preview'
   }
 ];
 
@@ -95,15 +115,12 @@ const FREE_RESOURCES=[
   {cat:'excel-templates',name:'Vehicle Maintenance Log',desc:'Log services, repairs, and mileage to stay on top of vehicle upkeep.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Vehicle-Maintenance-Log.xlsx'},
   {cat:'excel-templates',name:'Workout & Fitness Tracker',desc:'Log workouts, sets, reps, and progress toward your fitness goals.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Workout-Fitness-Tracker.xlsx'},
 
-  {
-    cat:'practice-datasets',
-    name:'Practice Datasets',
-    desc:'Clean datasets from real-world scenarios for hands-on practice',
-    icon:'database',
-    color:'#2563EB',
-    bg:'rgba(37,99,235,.1)',
-    count:'8 datasets'
-  },
+  {cat:'practice-datasets',name:'Airline Passenger Satisfaction',desc:'Survey and flight data to practice customer satisfaction analysis and segmentation.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Airline-Passenger-Satisfaction.xlsx'},
+  {cat:'practice-datasets',name:'AmazingMart Data Model',desc:'A multi-table retail dataset for practicing data modeling and relationships in Power BI.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/AmazingMart-Data-Model.xlsx'},
+  {cat:'practice-datasets',name:'Data Analysis PBI',desc:'A lightweight dataset for practicing core Power BI report-building fundamentals.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Data-Analysis-PBI.xlsx'},
+  {cat:'practice-datasets',name:'HR Employee Attrition',desc:'Employee records for practicing attrition analysis, retention trends, and HR reporting.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/HR-Employee-Attrition.csv'},
+  {cat:'practice-datasets',name:'Project Management Tracker',desc:'Project and task-level data for practicing project tracking and status reporting.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Project-Management.csv'},
+  {cat:'practice-datasets',name:'Supply Chain Data',desc:'Supply chain operations data for practicing logistics and inventory analysis.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/supply-chain-data.csv'},
 
   {
     cat:'cheat-sheets',
@@ -144,25 +161,16 @@ const FREE_RESOURCES=[
     downloadUrl:'assets/pdfs/statistics-cheatsheet-advanced.pdf'
   },
 
-  {
-    cat:'case-studies',
-    name:'Business Case Studies',
-    desc:'Step-by-step walkthroughs of real analytics business problems',
-    icon:'briefcase',
-    color:'#F59E0B',
-    bg:'rgba(245,158,11,.1)',
-    count:'5 cases'
-  },
 
-  {
-    cat:'dashboard-themes',
-    name:'Dashboard Themes',
-    desc:'Professionally designed Power BI and Excel color themes',
-    icon:'palette',
-    color:'#EC4899',
-    bg:'rgba(236,72,153,.1)',
-    count:'4 themes'
-  },
+  {cat:'case-studies',name:'Diagnosing Customer Churn',desc:'A worked walkthrough of structuring a churn investigation — cohort analysis, isolating the real cause, and turning findings into a decision.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-customer-churn.pdf'},
+  {cat:'case-studies',name:'Reducing Stockouts Without Overstocking',desc:'ABC analysis applied to a real inventory problem — classifying 2,000 SKUs and fixing a one-size-fits-all reorder policy.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-supply-chain-stockouts.pdf'},
+  {cat:'case-studies',name:'Uncovering the Real Drivers of Attrition',desc:'Why the obvious theory (pay) is usually wrong, and the segmentation approach that finds what\'s actually driving employee turnover.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-hr-attrition.pdf'},
+
+
+  {cat:'dashboard-themes',name:'Dark Mode Theme',desc:'A dark Power BI theme with high-contrast accent colors — matches modern dashboard aesthetics.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/dark-mode.json'},
+  {cat:'dashboard-themes',name:'Corporate Blue Theme',desc:'A clean, professional blue palette — ideal for executive reports and client-facing dashboards.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/corporate-blue.json'},
+  {cat:'dashboard-themes',name:'Vibrant Modern Theme',desc:'Bold, saturated colors for dashboards that need to stand out — presentations, marketing analytics.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/vibrant-modern.json'},
+  {cat:'dashboard-themes',name:'Soft Pastel Theme',desc:'A gentle, muted palette that\'s easy on the eyes for long-session dashboards and reports.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/soft-pastel.json'},
 
   {
     cat:'icon-packs',
@@ -171,7 +179,7 @@ const FREE_RESOURCES=[
     icon:'shapes',
     color:'#06B6D4',
     bg:'rgba(6,182,212,.1)',
-    count:'200+ icons',
+    count:'20+ icons',
     downloadUrl:'assets/svg/icon-pack.zip'
 }
 ];
@@ -394,7 +402,7 @@ const CMDS=[
 ];
 
 const RA=[
-  {title:'IPL 2024 Dashboard',meta:'Power BI · Added Jul 2025',icon:'layout-dashboard',color:'#F97316',bg:'rgba(249,115,22,.1)'},
+  {title:'IPL 2025 Dashboard',meta:'Power BI · Added Jul 2025',icon:'layout-dashboard',color:'#F97316',bg:'rgba(249,115,22,.1)'},
   {title:'Cohort Analysis Template',meta:'Excel · Added Jun 2025',icon:'table-2',color:'#10B981',bg:'rgba(16,185,129,.1)'},
   {title:'Power Query Cheat Sheet',meta:'PDF · Added May 2025',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)'}
 ];

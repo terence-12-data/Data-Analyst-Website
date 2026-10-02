@@ -1,0 +1,23 @@
+{
+  "name": "The Analyst's Toolbox \u2013 Dark Mode",
+  "dataColors": [
+    "#3B82F6",
+    "#10B981",
+    "#F59E0B",
+    "#8B5CF6",
+    "#EC4899",
+    "#06B6D4",
+    "#F97316",
+    "#84CC16"
+  ],
+  "background": "#0F172A",
+  "foreground": "#F1F5F9",
+  "tableAccent": "#2563EB",
+  "good": "#10B981",
+  "bad": "#EF4444",
+  "neutral": "#94A3B8",
+  "maximum": "#3B82F6",
+  "center": "#64748B",
+  "minimum": "#1E293B",
+  "null": "#475569"
+}

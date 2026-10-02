@@ -1,0 +1,23 @@
+{
+  "name": "The Analyst's Toolbox \u2013 Soft Pastel",
+  "dataColors": [
+    "#A5D8FF",
+    "#B2F2BB",
+    "#FFD8A8",
+    "#FFC9DE",
+    "#D0BFFF",
+    "#99E9F2",
+    "#FFEC99",
+    "#C3FAE8"
+  ],
+  "background": "#FFFDF9",
+  "foreground": "#374151",
+  "tableAccent": "#93C5FD",
+  "good": "#40C057",
+  "bad": "#FA5252",
+  "neutral": "#ADB5BD",
+  "maximum": "#A5D8FF",
+  "center": "#FFD8A8",
+  "minimum": "#FFF4E6",
+  "null": "#E9ECEF"
+}
