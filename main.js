@@ -1,18 +1,18 @@
 
 const TOOLS=[
-  {num:'01',name:'Pareto Chart',diff:'Beginner',dc:'bg2',use:'Identify the vital few products driving 80% of revenue',time:'8 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],top:true,linkedinUrl:''},
-  {num:'02',name:'Histogram',diff:'Beginner',dc:'bg2',use:'Visualize how a variable is distributed and spot skew or outliers',time:'5 mins',status:'Published',sc:'bg2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics','Visualization'],linkedinUrl:''},
-  {num:'03',name:'Scatter Plot',diff:'Intermediate',dc:'by',use:'Reveal the relationship between two numeric variables',time:'8 mins',status:'Published',sc:'bg2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics','Visualization'],linkedinUrl:''},
-  {num:'04',name:'Box Plot',diff:'Intermediate',dc:'by',use:'Compare distribution, spread, and consistency across categories',time:'10 mins',status:'Published',sc:'bg2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics'],linkedinUrl:''},
-  {num:'05',name:'Waterfall Chart',diff:'Intermediate',dc:'by',use:'Bridge a starting value to an ending value step by step',time:'12 mins',status:'Published',sc:'bg2',cats:['excel','visualization','finance'],tags:['Excel','Finance','Visualization'],top:true,linkedinUrl:''},
-  {num:'06',name:'Funnel Chart',diff:'Beginner',dc:'bg2',use:'Show sequential narrowing of volume across ordered stages',time:'7 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Business','Visualization'],linkedinUrl:''},
-  {num:'07',name:'Treemap',diff:'Beginner',dc:'bg2',use:'Show relative size across many categories in compact space',time:'8 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Business','Visualization'],linkedinUrl:''},
-  {num:'08',name:'Heatmap',diff:'Beginner',dc:'bg2',use:'Show intensity across two categorical dimensions at once',time:'8 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Business','Visualization'],linkedinUrl:''},
-  {num:'09',name:'Radar Chart',diff:'Intermediate',dc:'by',use:'Compare performance across multiple related dimensions at once',time:'12 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Business','Visualization'],linkedinUrl:''},
-  {num:'10',name:'Line Chart',diff:'Beginner',dc:'bg2',use:'Show how a value changes continuously over time',time:'6 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],top:true,linkedinUrl:''},
-  {num:'11',name:'Combo Chart',diff:'Intermediate',dc:'by',use:'Compare two metrics on different scales against a shared category',time:'10 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Business','Visualization'],linkedinUrl:''},
-  {num:'12',name:'Bar Chart',diff:'Beginner',dc:'bg2',use:'Compare a value across a small number of distinct categories',time:'4 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''},
-  {num:'13',name:'Map Chart',diff:'Beginner',dc:'bg2',use:'Visualize how a value is distributed across geographic locations',time:'8 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''}
+  {num:'01',name:'Pareto Chart',diff:'Beginner',dc:'bg2',use:'Identify top revenue-generating products using the 80/20 rule',time:'60 mins',status:'Published',sc:'bg2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],top:true,linkedinUrl:'https://lnkd.in/p/dnV73n-X'},
+  {num:'02',name:'Histogram',diff:'Beginner',dc:'bg2',use:'Visualize how data is distributed across ranges and spot skewness at a glance',time:'45 mins',status:'Published',sc:'bg2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics','Visualization'],top:true,linkedinUrl:'https://lnkd.in/p/dP3xNhRv'},
+  {num:'03',name:'Scatter Plot',diff:'Beginner',dc:'bg2',use:'Explore the relationship between two variables and spot correlation patterns',time:'40 mins',status:'Published',sc:'bg2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics','Visualization'],top:true,linkedinUrl:'https://lnkd.in/p/d-K9xbpJ'},
+  {num:'04',name:'Box Plot',diff:'Intermediate',dc:'by',use:'Detect outliers in sales data and understand distribution',time:'90 mins',status:'Published',sc:'bg2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics'],linkedinUrl:''},
+  {num:'05',name:'Waterfall Chart',diff:'Beginner',dc:'bg2',use:'Visualize profit & loss breakdown month by month',time:'45 mins',status:'Published',sc:'bg2',cats:['excel','visualization','finance'],tags:['Excel','Finance','Visualization'],linkedinUrl:''},
+  {num:'06',name:'Funnel Chart',diff:'Beginner',dc:'bg2',use:'Visualize conversion drop-off across each stage of a sales or marketing funnel',time:'45 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''},
+  {num:'07',name:'Treemap',diff:'Intermediate',dc:'by',use:'Compare hierarchical category sizes at a glance using nested rectangles',time:'60 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''},
+  {num:'08',name:'HeatMap',diff:'Intermediate',dc:'by',use:'Spot patterns and intensity across two dimensions, like sales by region and month',time:'60 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','statistics','visualization'],tags:['Excel','Statistics','Visualization'],linkedinUrl:''},
+  {num:'09',name:'Radar Chart',diff:'Intermediate',dc:'by',use:'Compare multiple metrics across categories, like product or team performance',time:'60 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''},
+  {num:'10',name:'Line Chart',diff:'Beginner',dc:'bg2',use:"Track a metric's trend over time, like monthly revenue or website traffic",time:'30 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''},
+  {num:'11',name:'Combo Chart',diff:'Intermediate',dc:'by',use:'Combine bars and lines to show two related metrics, like volume and growth rate, on one chart',time:'60 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''},
+  {num:'12',name:'Bar Chart',diff:'Beginner',dc:'bg2',use:'Compare values across categories, like revenue by product or region',time:'30 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''},
+  {num:'13',name:'Map Chart',diff:'Intermediate',dc:'by',use:'Visualize geographic data, like sales or customers by country or state',time:'60 mins',status:'Coming Soon',sc:'bgr2',cats:['excel','visualization','business'],tags:['Excel','Visualization','Business'],linkedinUrl:''}
 ];
 
 
@@ -70,7 +70,7 @@ const MARKET=[
     buyUrl:'https://rebellotter.gumroad.com/l/IPLSixesAnalyticsDashboardPowerBI',
     previewCta:'IPL 2024 Dashboard preview'
   },
-
+  
   {
     type:'dashboard',
     cat:'hr',
@@ -90,6 +90,7 @@ const MARKET=[
     buyUrl:'https://rebellotter.gumroad.com/l/hr-attrition-dashboard-excel',
     previewCta:'HR Attrition Dashboard preview'
   }
+
 ];
 
 
@@ -98,29 +99,25 @@ const MARKET=[
 // ============================================================
 
 const FREE_RESOURCES=[
-  {cat:'excel-templates',name:'Employee Timesheet',desc:'Track daily hours, breaks, and overtime for your team in one clean sheet.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Employee-Timesheet.xlsx'},
-  {cat:'excel-templates',name:'Event & Wedding Budget Planner',desc:'Plan and track every expense for weddings or big events, category by category.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Event-Wedding-Budget-Planner.xlsx'},
-  {cat:'excel-templates',name:'Health & Medication Tracker',desc:'Log medications, dosages, and schedules so nothing gets missed.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Health-Medication-Tracker.xlsx'},
-  {cat:'excel-templates',name:'Invoice Generator',desc:'Create professional invoices with automatic totals and tax calculations.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Invoice-Generator.xlsx'},
-  {cat:'excel-templates',name:'Job Application Tracker',desc:'Track every application, interview stage, and follow-up in one place.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Job-Application-Tracker.xlsx'},
-  {cat:'excel-templates',name:'Loan / EMI Calculator',desc:'Calculate monthly EMIs and see a full amortization breakdown instantly.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Loan-EMI-Calculator.xlsx'},
-  {cat:'excel-templates',name:'Meal Planner & Grocery List',desc:'Plan weekly meals and auto-generate your grocery list.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Meal-Planner-Grocery-List.xlsx'},
-  {cat:'excel-templates',name:'Monthly Budget Planner',desc:'Track income, expenses, and savings goals month by month.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Monthly-Budget-Planner.xlsx'},
-  {cat:'excel-templates',name:'Monthly Habit Tracker',desc:'Build and track daily habits with a simple monthly grid.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Monthly-Habit-Tracker.xlsx'},
-  {cat:'excel-templates',name:'Net Worth & Investment Tracker',desc:'Track assets, liabilities, and investments to monitor your net worth over time.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Net-Worth-Investment-Tracker.xlsx'},
-  {cat:'excel-templates',name:'Student Grade Tracker',desc:'Track assignments, grades, and GPA across subjects and semesters.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Student-Grade-Tracker.xlsx'},
-  {cat:'excel-templates',name:'Subscription Tracker',desc:'Keep tabs on every recurring subscription and what it\'s costing you.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Subscription-Tracker.xlsx'},
-  {cat:'excel-templates',name:'Task Manager & To-Do List',desc:'A simple prioritized to-do list with due dates and status tracking.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Task-Manager-ToDo-List.xlsx'},
-  {cat:'excel-templates',name:'Travel & Trip Planner',desc:'Plan itineraries, budgets, and packing lists for your next trip.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Travel-Trip-Planner.xlsx'},
-  {cat:'excel-templates',name:'Vehicle Maintenance Log',desc:'Log services, repairs, and mileage to stay on top of vehicle upkeep.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Vehicle-Maintenance-Log.xlsx'},
-  {cat:'excel-templates',name:'Workout & Fitness Tracker',desc:'Log workouts, sets, reps, and progress toward your fitness goals.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Workout-Fitness-Tracker.xlsx'},
+  {
+    cat:'excel-templates',
+    name:'Excel Templates',
+    desc:'Ready-to-use Excel workbooks for common business analyses',
+    icon:'table-2',
+    color:'#10B981',
+    bg:'rgba(16,185,129,.1)',
+    count:'12 files'
+  },
 
-  {cat:'practice-datasets',name:'Airline Passenger Satisfaction',desc:'Survey and flight data to practice customer satisfaction analysis and segmentation.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Airline-Passenger-Satisfaction.xlsx'},
-  {cat:'practice-datasets',name:'AmazingMart Data Model',desc:'A multi-table retail dataset for practicing data modeling and relationships in Power BI.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/AmazingMart-Data-Model.xlsx'},
-  {cat:'practice-datasets',name:'Data Analysis PBI',desc:'A lightweight dataset for practicing core Power BI report-building fundamentals.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Data-Analysis-PBI.xlsx'},
-  {cat:'practice-datasets',name:'HR Employee Attrition',desc:'Employee records for practicing attrition analysis, retention trends, and HR reporting.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/HR-Employee-Attrition.csv'},
-  {cat:'practice-datasets',name:'Project Management Tracker',desc:'Project and task-level data for practicing project tracking and status reporting.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Project-Management.csv'},
-  {cat:'practice-datasets',name:'Supply Chain Data',desc:'Supply chain operations data for practicing logistics and inventory analysis.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/supply-chain-data.csv'},
+  {
+    cat:'practice-datasets',
+    name:'Practice Datasets',
+    desc:'Clean datasets from real-world scenarios for hands-on practice',
+    icon:'database',
+    color:'#2563EB',
+    bg:'rgba(37,99,235,.1)',
+    count:'8 datasets'
+  },
 
   {
     cat:'cheat-sheets',
@@ -161,16 +158,25 @@ const FREE_RESOURCES=[
     downloadUrl:'assets/pdfs/statistics-cheatsheet-advanced.pdf'
   },
 
+  {
+    cat:'case-studies',
+    name:'Business Case Studies',
+    desc:'Step-by-step walkthroughs of real analytics business problems',
+    icon:'briefcase',
+    color:'#F59E0B',
+    bg:'rgba(245,158,11,.1)',
+    count:'5 cases'
+  },
 
-  {cat:'case-studies',name:'Diagnosing Customer Churn',desc:'A worked walkthrough of structuring a churn investigation — cohort analysis, isolating the real cause, and turning findings into a decision.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-customer-churn.pdf'},
-  {cat:'case-studies',name:'Reducing Stockouts Without Overstocking',desc:'ABC analysis applied to a real inventory problem — classifying 2,000 SKUs and fixing a one-size-fits-all reorder policy.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-supply-chain-stockouts.pdf'},
-  {cat:'case-studies',name:'Uncovering the Real Drivers of Attrition',desc:'Why the obvious theory (pay) is usually wrong, and the segmentation approach that finds what\'s actually driving employee turnover.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-hr-attrition.pdf'},
-
-
-  {cat:'dashboard-themes',name:'Dark Mode Theme',desc:'A dark Power BI theme with high-contrast accent colors — matches modern dashboard aesthetics.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/dark-mode.json'},
-  {cat:'dashboard-themes',name:'Corporate Blue Theme',desc:'A clean, professional blue palette — ideal for executive reports and client-facing dashboards.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/corporate-blue.json'},
-  {cat:'dashboard-themes',name:'Vibrant Modern Theme',desc:'Bold, saturated colors for dashboards that need to stand out — presentations, marketing analytics.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/vibrant-modern.json'},
-  {cat:'dashboard-themes',name:'Soft Pastel Theme',desc:'A gentle, muted palette that\'s easy on the eyes for long-session dashboards and reports.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/soft-pastel.json'},
+  {
+    cat:'dashboard-themes',
+    name:'Dashboard Themes',
+    desc:'Professionally designed Power BI and Excel color themes',
+    icon:'palette',
+    color:'#EC4899',
+    bg:'rgba(236,72,153,.1)',
+    count:'4 themes'
+  },
 
   {
     cat:'icon-packs',
@@ -179,9 +185,8 @@ const FREE_RESOURCES=[
     icon:'shapes',
     color:'#06B6D4',
     bg:'rgba(6,182,212,.1)',
-    count:'20+ icons',
-    downloadUrl:'assets/svg/icon-pack.zip'
-}
+    count:'200+ icons'
+  }
 ];
 
 
@@ -402,7 +407,7 @@ const CMDS=[
 ];
 
 const RA=[
-  {title:'IPL 2025 Dashboard',meta:'Power BI · Added Jul 2025',icon:'layout-dashboard',color:'#F97316',bg:'rgba(249,115,22,.1)'},
+  {title:'IPL 2024 Dashboard',meta:'Power BI · Added Jul 2025',icon:'layout-dashboard',color:'#F97316',bg:'rgba(249,115,22,.1)'},
   {title:'Cohort Analysis Template',meta:'Excel · Added Jun 2025',icon:'table-2',color:'#10B981',bg:'rgba(16,185,129,.1)'},
   {title:'Power Query Cheat Sheet',meta:'PDF · Added May 2025',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)'}
 ];
@@ -416,9 +421,9 @@ const MD=[
 
 function toolCardHtml(t){
   const carouselBtn=t.linkedinUrl
-    ?`<a href="${t.linkedinUrl}" target="_blank" rel="noopener" class="btn bp bsm">
+    ?`<button class="btn bp bsm" data-ad-url="${t.linkedinUrl}">
         <i data-lucide="book-open"></i> Read Carousel
-      </a>`
+      </button>`
     :`<button class="btn bp bsm" data-cta="${t.name} carousel">
         <i data-lucide="book-open"></i> Read Carousel
       </button>`;
@@ -1369,6 +1374,122 @@ function initQR(){
 
 
 // ============================================================
+// AD INTERSTITIAL MODAL
+// ============================================================
+
+function initAdModal(){
+
+  document.addEventListener('click',e=>{
+
+    const b=e.target.closest('[data-ad-url]');
+
+    if(!b)return;
+
+    runAdInterstitial(b.dataset.adUrl);
+
+  });
+
+}
+
+
+function runAdInterstitial(targetUrl){
+
+  if(!targetUrl)return;
+
+  if(!MARKET||!MARKET.length){
+    window.open(targetUrl,'_blank','noopener');
+    return;
+  }
+
+  let modal=document.getElementById('ad-modal');
+
+  if(!modal){
+
+    modal=document.createElement('div');
+    modal.id='ad-modal';
+    modal.className='ad-modal';
+
+    modal.innerHTML=`
+      <div class="ad-box">
+        <span class="ad-tag">AD</span>
+        <div class="ad-card-img"><img id="ad-img" alt="" /></div>
+        <div class="ad-card-name" id="ad-name"></div>
+        <p class="ad-card-desc" id="ad-desc"></p>
+        <a class="btn bp bsm ad-cta" id="ad-cta" target="_blank" rel="noopener">
+          <i data-lucide="external-link"></i> View Dashboard
+        </a>
+        <div class="ad-status" id="ad-status">Redirecting…</div>
+        <div class="ad-ring">
+          <svg viewBox="0 0 56 56">
+            <circle class="trk" cx="28" cy="28" r="24"></circle>
+            <circle class="prg" id="ad-ring-prg" cx="28" cy="28" r="24"></circle>
+          </svg>
+          <div class="ad-ring-n" id="ad-ring-n">5</div>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    if(window.lucide)lucide.createIcons();
+  }
+
+  const pick=MARKET[Math.floor(Math.random()*MARKET.length)];
+
+  const img=document.getElementById('ad-img');
+  const name=document.getElementById('ad-name');
+  const desc=document.getElementById('ad-desc');
+  const cta=document.getElementById('ad-cta');
+  const status=document.getElementById('ad-status');
+  const ringN=document.getElementById('ad-ring-n');
+  const ringPrg=document.getElementById('ad-ring-prg');
+
+  if(img){img.src=pick.img;img.alt=pick.name;}
+  if(name)name.textContent=pick.name;
+  if(desc)desc.textContent=pick.desc;
+  if(cta)cta.href=pick.buyUrl;
+  if(status)status.textContent='Redirecting…';
+
+  const CIRC=2*Math.PI*24;
+
+  if(ringPrg){
+    ringPrg.style.strokeDasharray=CIRC;
+    ringPrg.style.strokeDashoffset=0;
+  }
+
+  modal.classList.add('open');
+
+  let n=5;
+
+  if(ringN)ringN.textContent=n;
+
+  const timer=setInterval(()=>{
+
+    n--;
+
+    if(ringN)ringN.textContent=Math.max(n,0);
+
+    if(ringPrg){
+      const p=(5-n)/5;
+      ringPrg.style.strokeDashoffset=CIRC*p;
+    }
+
+    if(n<=0){
+
+      clearInterval(timer);
+
+      modal.classList.remove('open');
+
+      window.open(targetUrl,'_blank','noopener');
+
+    }
+
+  },1000);
+
+}
+
+
+// ============================================================
 // COUNTERS
 // ============================================================
 
@@ -1757,6 +1878,8 @@ function init(){
   initScroll();
 
   initQR();
+
+  initAdModal();
 
   initCounters();
 
