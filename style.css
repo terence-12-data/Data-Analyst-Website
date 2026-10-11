@@ -18,6 +18,8 @@ button{cursor:pointer;font-family:var(--font);border:none;background:none}
 .nl{display:flex;align-items:center;gap:8px;font-size:1.05rem;font-weight:700;color:var(--text)}
 .nl:hover{opacity:.8}
 .nl em{font-style:normal;font-size:1.3rem}
+.logo-mark{height:24px;width:auto;display:block;flex-shrink:0}
+.fbn .logo-mark{height:22px}
 ul.nv{display:flex;align-items:center;gap:4px;list-style:none}
 ul.nv a{padding:8px 12px;border-radius:8px;font-size:.875rem;font-weight:500;color:var(--text2);transition:all var(--tr)}
 ul.nv a:hover{color:var(--text);background:var(--border)}
