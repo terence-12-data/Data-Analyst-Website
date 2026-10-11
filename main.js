@@ -1391,13 +1391,12 @@ function initAdModal(){
 
 }
 
-
 function runAdInterstitial(targetUrl){
 
   if(!targetUrl)return;
 
   if(!MARKET||!MARKET.length){
-    window.open(targetUrl,'_blank','noopener');
+    window.location.href=targetUrl;
     return;
   }
 
@@ -1424,7 +1423,7 @@ function runAdInterstitial(targetUrl){
             <circle class="trk" cx="28" cy="28" r="24"></circle>
             <circle class="prg" id="ad-ring-prg" cx="28" cy="28" r="24"></circle>
           </svg>
-          <div class="ad-ring-n" id="ad-ring-n">5</div>
+          <div class="ad-ring-n" id="ad-ring-n">3</div>
         </div>
       </div>
     `;
@@ -1459,7 +1458,7 @@ function runAdInterstitial(targetUrl){
 
   modal.classList.add('open');
 
-  let n=5;
+  let n=3;
 
   if(ringN)ringN.textContent=n;
 
@@ -1470,17 +1469,14 @@ function runAdInterstitial(targetUrl){
     if(ringN)ringN.textContent=Math.max(n,0);
 
     if(ringPrg){
-      const p=(5-n)/5;
+      const p=(3-n)/3;;
       ringPrg.style.strokeDashoffset=CIRC*p;
     }
-
     if(n<=0){
 
       clearInterval(timer);
 
-      modal.classList.remove('open');
-
-      window.open(targetUrl,'_blank','noopener');
+      window.location.href=targetUrl;
 
     }
 
