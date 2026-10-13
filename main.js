@@ -38,13 +38,14 @@ const MARKET=[
     badge:'⚽ Football',
     badgeClass:'bg2',
     img:'assets/images/fifa_dashboard.jpg',
-    desc:'A comprehensive football analytics dashboard built in Power BI. Explore global goal statistics, top scorers, and goal trends across major leagues from 2018–2023.',
+    desc:'Interactive Power BI dashboard covering all goals analysis from 104 matches of the FIFA World Cup 2026.',
     features:[
-      'Interactive world map with goal counts',
-      'Top scorers & assists leaderboard',
-      'Goal trend line chart (2018–2023)',
-      'League-wise breakdown',
-      'Drill-through filters included'
+      'Goals by time interval (0-15 to Extra Time)',
+      'Average goal time by stage (Group to Final)',
+      'Top goal scorers by country' ,
+      'Filters: Country, Stage, Player',
+      'Match-by-match goals timeline'
+
     ],
     price:'599',
     buyUrl:'https://rebellotter.gumroad.com/l/worldcup2026-dashboard',
@@ -54,11 +55,11 @@ const MARKET=[
   {
     type:'dashboard',
     cat:'cricket',
-    name:'IPL 2024 Dashboard',
+    name:'IPL 2025 Dashboard',
     badge:'🏏 Cricket',
     badgeClass:'bo',
     img:'assets/images/ipl_dashboard.jpg',
-    desc:'A deep-dive IPL 2024 season analytics dashboard. Covers batting, bowling, match results, and team performance across all 70 matches of the season.',
+    desc:'This interactive Power BI dashboard analyzes IPL six-hitting performance from 2008–2026, helping you explore how players compare in terms of total sixes, scoring efficiency, strike rate, and power-hitting impact.',
     features:[
       'Top run scorers & strike rates',
       'Team win percentage donut chart',
@@ -68,7 +69,7 @@ const MARKET=[
     ],
     price:'599',
     buyUrl:'https://rebellotter.gumroad.com/l/IPLSixesAnalyticsDashboardPowerBI',
-    previewCta:'IPL 2024 Dashboard preview'
+    previewCta:'IPL 2025 Dashboard preview'
   },
   
   {
@@ -189,40 +190,9 @@ const FREE_RESOURCES=[
   }
 ];
 
-
-function renderMarket(f='all',s=''){
-
-  const g=document.getElementById('market-grid');
-
-  if(!g)return;
-
-  const fl=MARKET.filter(m=>{
-
-    const mf=f==='all'||m.cat===f;
-
-    const ms=
-      !s||
-      m.name.toLowerCase().includes(s.toLowerCase())||
-      m.desc.toLowerCase().includes(s.toLowerCase());
-
-    return mf&&ms;
-
-  });
-
-  if(!fl.length){
-
-    g.innerHTML=`
-      <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text3)">
-        <p style="font-size:2rem;margin-bottom:12px">🔍</p>
-        <p>No products found.</p>
-      </div>
-    `;
-
-    return;
-  }
-
-  g.innerHTML=fl.map(m=>`
-    <div class="dc">
+function marketCardHtml(m, extra=''){
+  return `
+    <div class="dc ${extra}">
 
       <div class="dp">
         <img src="${m.img}" alt="${m.name}" loading="lazy" />
@@ -259,7 +229,7 @@ function renderMarket(f='all',s=''){
               <i data-lucide="eye"></i> Preview
             </button>
 
-            <a href="${m.buyUrl}" target="_blank" rel="noopener" class="btn bp bsm">
+            <a href="${m.buyUrl}" target="_blank" rel="noopener" class="btn bp bsm" aria-label="Buy ${m.name}">
               <i data-lucide="shopping-cart"></i> Buy Now
             </a>
 
@@ -270,7 +240,53 @@ function renderMarket(f='all',s=''){
       </div>
 
     </div>
-  `).join('');
+  `;
+}
+
+
+function renderMarket(f='all',s=''){
+
+  const g=document.getElementById('market-grid');
+
+  if(!g)return;
+
+  const q=s.toLowerCase();
+
+  const fl=MARKET.filter(m=>{
+    const mf=f==='all'||m.cat===f;
+    const ms=!q||m.name.toLowerCase().includes(q)||m.desc.toLowerCase().includes(q);
+    return mf&&ms;
+  });
+
+  if(!fl.length){
+    g.innerHTML=`
+      <div style="grid-column:1/-1;text-align:center;padding:60px;color:var(--text3)">
+        <p style="font-size:2rem;margin-bottom:12px">🔍</p>
+        <p>No products found.</p>
+      </div>
+    `;
+    return;
+  }
+
+  g.innerHTML=fl.map(m=>marketCardHtml(m)).join('');
+
+  lucide.createIcons();
+  obsv();
+}
+
+
+function renderHomeDashboards(){
+
+  const g=document.getElementById('home-dashboards');
+
+  if(!g)return;
+
+  g.querySelectorAll('.dc').forEach(el=>el.remove());
+
+  g.insertAdjacentHTML(
+    'afterbegin',
+    MARKET.map((m,i)=>marketCardHtml(m, i===0 ? 'fi3' : 'fi3 fi3d'+Math.min(i,2))).join('')
+  );
 
   lucide.createIcons();
   obsv();
@@ -421,7 +437,7 @@ const MD=[
 
 function toolCardHtml(t){
   const carouselBtn=t.linkedinUrl
-    ?`<button class="btn bp bsm" data-ad-url="${t.linkedinUrl}">
+    ?`<button class="btn bp bsm" data-go-url="${t.linkedinUrl}">
         <i data-lucide="book-open"></i> Read Carousel
       </button>`
     :`<button class="btn bp bsm" data-cta="${t.name} carousel">
@@ -1372,117 +1388,131 @@ function initQR(){
 
 }
 
-
 // ============================================================
-// AD INTERSTITIAL MODAL
+// FEATURED PICK MODAL (replaces the old AD INTERSTITIAL MODAL block)
 // ============================================================
 
-function initAdModal(){
+let promoTimer = null;
 
-  document.addEventListener('click',e=>{
-
-    const b=e.target.closest('[data-ad-url]');
-
-    if(!b)return;
-
-    runAdInterstitial(b.dataset.adUrl);
-
+function initPromoModal() {
+  document.addEventListener('click', e => {
+    const b = e.target.closest('[data-go-url]');
+    if (!b) return;
+    runPromoModal(b.dataset.goUrl);
   });
 
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closePromoModal(true);
+  });
 }
 
-function runAdInterstitial(targetUrl){
+// Only allow http(s) URLs
+function safeUrl(u) {
+  try {
+    const url = new URL(u, location.href);
+    return /^https?:$/.test(url.protocol) ? url.href : null;
+  } catch (_) {
+    return null;
+  }
+}
 
-  if(!targetUrl)return;
+function closePromoModal(goNow) {
+  clearInterval(promoTimer);
+  promoTimer = null;
+  const modal = document.getElementById('promo-modal');
+  if (modal) modal.classList.remove('open');
+  if (goNow && modal && modal.dataset.target) {
+    window.location.href = modal.dataset.target;
+  }
+}
 
-  if(!MARKET||!MARKET.length){
-    window.location.href=targetUrl;
+function runPromoModal(targetUrl) {
+  const dest = safeUrl(targetUrl);
+  if (!dest) return;
+
+  if (typeof MARKET === 'undefined' || !MARKET || !MARKET.length) {
+    window.location.href = dest;
     return;
   }
 
-  let modal=document.getElementById('ad-modal');
+  let modal = document.getElementById('promo-modal');
 
-  if(!modal){
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'promo-modal';
+    modal.className = 'promo-modal';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', 'Featured dashboard');
 
-    modal=document.createElement('div');
-    modal.id='ad-modal';
-    modal.className='ad-modal';
-
-    modal.innerHTML=`
-      <div class="ad-box">
-        <span class="ad-tag">AD</span>
-        <div class="ad-card-img"><img id="ad-img" alt="" /></div>
-        <div class="ad-card-name" id="ad-name"></div>
-        <p class="ad-card-desc" id="ad-desc"></p>
-        <a class="btn bp bsm ad-cta" id="ad-cta" target="_blank" rel="noopener">
+    modal.innerHTML = `
+      <div class="promo-box">
+        <span class="promo-tag">Featured</span>
+        <div class="promo-card-img"><img id="promo-img" alt="" /></div>
+        <div class="promo-card-name" id="promo-name"></div>
+        <p class="promo-card-desc" id="promo-desc"></p>
+        <a class="btn bp bsm promo-cta" id="promo-cta" target="_blank" rel="noopener">
           <i data-lucide="external-link"></i> View Dashboard
         </a>
-        <div class="ad-status" id="ad-status">Redirecting…</div>
-        <div class="ad-ring">
-          <svg viewBox="0 0 56 56">
+        <div class="promo-status" id="promo-status" aria-live="polite">Taking you there…</div>
+        <div class="promo-ring">
+          <svg viewBox="0 0 56 56" aria-hidden="true">
             <circle class="trk" cx="28" cy="28" r="24"></circle>
-            <circle class="prg" id="ad-ring-prg" cx="28" cy="28" r="24"></circle>
+            <circle class="prg" id="promo-ring-prg" cx="28" cy="28" r="24"></circle>
           </svg>
-          <div class="ad-ring-n" id="ad-ring-n">3</div>
+          <div class="promo-ring-n" id="promo-ring-n">3</div>
         </div>
+        <button type="button" class="btn bsm promo-skip" id="promo-skip">Skip</button>
+        <button type="button" class="btn bsm promo-stay" id="promo-stay">Stay here</button>
       </div>
     `;
 
     document.body.appendChild(modal);
-
-    if(window.lucide)lucide.createIcons();
+    document.getElementById('promo-skip').addEventListener('click', () => closePromoModal(true));
+    document.getElementById('promo-stay').addEventListener('click', () => closePromoModal(false));
+    if (window.lucide) lucide.createIcons();
   }
 
-  const pick=MARKET[Math.floor(Math.random()*MARKET.length)];
+  clearInterval(promoTimer);
+  modal.dataset.target = dest;
 
-  const img=document.getElementById('ad-img');
-  const name=document.getElementById('ad-name');
-  const desc=document.getElementById('ad-desc');
-  const cta=document.getElementById('ad-cta');
-  const status=document.getElementById('ad-status');
-  const ringN=document.getElementById('ad-ring-n');
-  const ringPrg=document.getElementById('ad-ring-prg');
+  const pick = MARKET[Math.floor(Math.random() * MARKET.length)];
+  const buyUrl = safeUrl(pick.buyUrl);
 
-  if(img){img.src=pick.img;img.alt=pick.name;}
-  if(name)name.textContent=pick.name;
-  if(desc)desc.textContent=pick.desc;
-  if(cta)cta.href=pick.buyUrl;
-  if(status)status.textContent='Redirecting…';
+  const img = document.getElementById('promo-img');
+  const name = document.getElementById('promo-name');
+  const desc = document.getElementById('promo-desc');
+  const cta = document.getElementById('promo-cta');
+  const ringN = document.getElementById('promo-ring-n');
+  const ringPrg = document.getElementById('promo-ring-prg');
 
-  const CIRC=2*Math.PI*24;
+  if (img) { img.src = pick.img; img.alt = pick.name; }
+  if (name) name.textContent = pick.name;
+  if (desc) desc.textContent = pick.desc;
+  if (cta && buyUrl) cta.href = buyUrl;
 
-  if(ringPrg){
-    ringPrg.style.strokeDasharray=CIRC;
-    ringPrg.style.strokeDashoffset=0;
+  const CIRC = 2 * Math.PI * 24;
+  if (ringPrg) {
+    ringPrg.style.strokeDasharray = CIRC;
+    ringPrg.style.strokeDashoffset = 0;
   }
 
   modal.classList.add('open');
+  const skip = document.getElementById('promo-skip');
+  if (skip) skip.focus();
 
-  let n=3;
+  let n = 3;
+  if (ringN) ringN.textContent = n;
 
-  if(ringN)ringN.textContent=n;
-
-  const timer=setInterval(()=>{
-
+  promoTimer = setInterval(() => {
     n--;
-
-    if(ringN)ringN.textContent=Math.max(n,0);
-
-    if(ringPrg){
-      const p=(3-n)/3;;
-      ringPrg.style.strokeDashoffset=CIRC*p;
-    }
-    if(n<=0){
-
-      clearInterval(timer);
-
-      window.location.href=targetUrl;
-
-    }
-
-  },1000);
-
+    if (ringN) ringN.textContent = Math.max(n, 0);
+    if (ringPrg) ringPrg.style.strokeDashoffset = CIRC * ((3 - n) / 3);
+    if (n <= 0) closePromoModal(true);
+  }, 1000);
 }
+
+// Call initPromoModal() where you used to call initAdModal()
 
 
 // ============================================================
@@ -1856,6 +1886,8 @@ function init(){
 
   initMarketplace();
 
+  renderHomeDashboards();
+
 
   // Free Resources page
   initFreeResources();
@@ -1875,7 +1907,7 @@ function init(){
 
   initQR();
 
-  initAdModal();
+  initPromoModal();
 
   initCounters();
 

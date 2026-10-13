@@ -367,26 +367,31 @@ section{padding:100px 0}
 .qr-close{position:absolute;top:12px;right:12px;width:32px;height:32px;border-radius:8px;border:1px solid var(--border);color:var(--text2);font-size:1.2rem;line-height:1;display:flex;align-items:center;justify-content:center}
 .qr-close:hover{color:var(--text);border-color:var(--border2)}
 
-/* AD INTERSTITIAL MODAL */
-@keyframes adIn{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
-.ad-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(10px);z-index:2100;align-items:center;justify-content:center}
-.ad-modal.open{display:flex}
-.ad-modal.open .ad-box{animation:adIn .32s cubic-bezier(.4,0,.2,1)}
-.ad-box{background:var(--bg-card);border:1px solid var(--border2);border-radius:20px;padding:30px;text-align:center;position:relative;max-width:360px;width:calc(100% - 32px);margin:0 16px;box-shadow:0 40px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.02)}
-.ad-tag{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;letter-spacing:.14em;color:var(--text3);border:1px solid var(--border2);border-radius:20px;padding:4px 12px;margin-bottom:18px}
-.ad-card-img{width:100%;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--border);margin-bottom:16px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
-.ad-card-img img{width:100%;height:100%;object-fit:cover;display:block}
-.ad-card-name{font-weight:700;font-size:1.05rem;margin-bottom:8px;letter-spacing:-.01em}
-.ad-card-desc{font-size:.82rem;line-height:1.55;color:var(--text2);margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.ad-cta{width:100%;justify-content:center;margin-bottom:20px}
-.ad-status{font-size:.78rem;font-weight:500;letter-spacing:.02em;color:var(--text3);text-transform:uppercase;margin-bottom:14px;min-height:1.2em}
-.ad-ring{position:relative;width:52px;height:52px;margin:0 auto}
-.ad-ring svg{transform:rotate(-90deg);width:52px;height:52px}
-.ad-ring circle{fill:none;stroke-width:4}
-.ad-ring .trk{stroke:var(--border)}
-.ad-ring .prg{stroke:var(--accent);stroke-linecap:round;transition:stroke-dashoffset 1s linear}
-.ad-ring-n{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:var(--text)}
+/* FEATURED PICK MODAL */
+@keyframes promoIn{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.promo-modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.8);backdrop-filter:blur(10px);z-index:2100;align-items:center;justify-content:center}
+.promo-modal.open{display:flex}
+.promo-modal.open .promo-box{animation:promoIn .32s cubic-bezier(.4,0,.2,1)}
+.promo-box{background:var(--bg-card);border:1px solid var(--border2);border-radius:20px;padding:30px;text-align:center;position:relative;max-width:360px;width:calc(100% - 32px);margin:0 16px;box-shadow:0 40px 80px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.02)}
+.promo-tag{display:inline-flex;align-items:center;gap:5px;font-size:.68rem;font-weight:700;letter-spacing:.14em;color:var(--text3);border:1px solid var(--border2);border-radius:20px;padding:4px 12px;margin-bottom:18px;text-transform:uppercase}
+.promo-card-img{width:100%;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:var(--border);margin-bottom:16px;box-shadow:0 12px 28px rgba(0,0,0,.35)}
+.promo-card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.promo-card-name{font-weight:700;font-size:1.05rem;margin-bottom:8px;letter-spacing:-.01em}
+.promo-card-desc{font-size:.82rem;line-height:1.55;color:var(--text2);margin-bottom:18px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.promo-cta{width:100%;justify-content:center;margin-bottom:20px}
+.promo-status{font-size:.78rem;font-weight:500;letter-spacing:.02em;color:var(--text3);text-transform:uppercase;margin-bottom:14px;min-height:1.2em}
+.promo-ring{position:relative;width:52px;height:52px;margin:0 auto}
+.promo-ring svg{transform:rotate(-90deg);width:52px;height:52px}
+.promo-ring circle{fill:none;stroke-width:4}
+.promo-ring .trk{stroke:var(--border)}
+.promo-ring .prg{stroke:var(--accent);stroke-linecap:round;transition:stroke-dashoffset 1s linear}
+.promo-ring-n{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.05rem;color:var(--text)}
 
+/* New: Skip / Stay buttons */
+.promo-skip,.promo-stay{margin-top:16px;background:transparent;border:1px solid var(--border2);color:var(--text2);border-radius:10px;padding:8px 14px;cursor:pointer;font-size:.8rem}
+.promo-skip{margin-right:8px}
+.promo-skip:hover,.promo-stay:hover{border-color:var(--accent);color:var(--text)}
+.promo-skip:focus-visible,.promo-stay:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 /* Responsive */
 @media(max-width:1024px){
 .sg{grid-template-columns:repeat(3,1fr)}
