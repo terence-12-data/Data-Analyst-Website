@@ -1,23 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://the-analyst-toolbox.netlify.app/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://the-analyst-toolbox.netlify.app/toolbox.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-analyst-toolbox.netlify.app/marketplace.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://the-analyst-toolbox.netlify.app/free-resources.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://the-analyst-toolbox.netlify.app/</loc><lastmod>2026-10-13</lastmod></url>
+  <url><loc>https://the-analyst-toolbox.netlify.app/toolbox</loc><lastmod>2026-10-13</lastmod></url>
+  <url><loc>https://the-analyst-toolbox.netlify.app/marketplace</loc><lastmod>2026-10-13</lastmod></url>
+  <url><loc>https://the-analyst-toolbox.netlify.app/free-resources</loc><lastmod>2026-10-13</lastmod></url>
 </urlset>
