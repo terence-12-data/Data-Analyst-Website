@@ -94,100 +94,51 @@ const MARKET=[
 
 ];
 
-
-// ============================================================
-// FREE RESOURCES (separate page — free-resources.html)
-// ============================================================
-
 const FREE_RESOURCES=[
-  {
-    cat:'excel-templates',
-    name:'Excel Templates',
-    desc:'Ready-to-use Excel workbooks for common business analyses',
-    icon:'table-2',
-    color:'#10B981',
-    bg:'rgba(16,185,129,.1)',
-    count:'12 files'
-  },
+  // ---------- EXCEL TEMPLATES (16) ----------
+  {cat:'excel-templates',name:'Employee Timesheet',desc:'Track daily hours, breaks, and overtime for your team in one clean sheet.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Employee-Timesheet.xlsx'},
+  {cat:'excel-templates',name:'Event & Wedding Budget Planner',desc:'Plan and track every expense for weddings or big events, category by category.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Event-Wedding-Budget-Planner.xlsx'},
+  {cat:'excel-templates',name:'Health & Medication Tracker',desc:'Log medications, dosages, and schedules so nothing gets missed.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Health-Medication-Tracker.xlsx'},
+  {cat:'excel-templates',name:'Invoice Generator',desc:'Create professional invoices with automatic totals and tax calculations.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Invoice-Generator.xlsx'},
+  {cat:'excel-templates',name:'Job Application Tracker',desc:'Track every application, interview stage, and follow-up in one place.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Job-Application-Tracker.xlsx'},
+  {cat:'excel-templates',name:'Loan / EMI Calculator',desc:'Calculate monthly EMIs and see a full amortization breakdown instantly.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Loan-EMI-Calculator.xlsx'},
+  {cat:'excel-templates',name:'Meal Planner & Grocery List',desc:'Plan weekly meals and auto-generate your grocery list.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Meal-Planner-Grocery-List.xlsx'},
+  {cat:'excel-templates',name:'Monthly Budget Planner',desc:'Track income, expenses, and savings goals month by month.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Monthly-Budget-Planner.xlsx'},
+  {cat:'excel-templates',name:'Monthly Habit Tracker',desc:'Build and track daily habits with a simple monthly grid.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Monthly-Habit-Tracker.xlsx'},
+  {cat:'excel-templates',name:'Net Worth & Investment Tracker',desc:'Track assets, liabilities, and investments to monitor your net worth over time.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Net-Worth-Investment-Tracker.xlsx'},
+  {cat:'excel-templates',name:'Student Grade Tracker',desc:'Track assignments, grades, and GPA across subjects and semesters.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Student-Grade-Tracker.xlsx'},
+  {cat:'excel-templates',name:'Subscription Tracker',desc:'Keep tabs on every recurring subscription and what it\'s costing you.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Subscription-Tracker.xlsx'},
+  {cat:'excel-templates',name:'Task Manager & To-Do List',desc:'A simple prioritized to-do list with due dates and status tracking.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Task-Manager-ToDo-List.xlsx'},
+  {cat:'excel-templates',name:'Travel & Trip Planner',desc:'Plan itineraries, budgets, and packing lists for your next trip.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Travel-Trip-Planner.xlsx'},
+  {cat:'excel-templates',name:'Vehicle Maintenance Log',desc:'Log services, repairs, and mileage to stay on top of vehicle upkeep.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Vehicle-Maintenance-Log.xlsx'},
+  {cat:'excel-templates',name:'Workout & Fitness Tracker',desc:'Log workouts, sets, reps, and progress toward your fitness goals.',icon:'file-spreadsheet',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'XLSX',downloadUrl:'assets/excel-templates/Workout-Fitness-Tracker.xlsx'},
 
-  {
-    cat:'practice-datasets',
-    name:'Practice Datasets',
-    desc:'Clean datasets from real-world scenarios for hands-on practice',
-    icon:'database',
-    color:'#2563EB',
-    bg:'rgba(37,99,235,.1)',
-    count:'8 datasets'
-  },
+  // ---------- PRACTICE DATASETS (6) ----------
+  {cat:'practice-datasets',name:'Airline Passenger Satisfaction',desc:'Survey and flight data to practice customer satisfaction analysis and segmentation.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Airline-Passenger-Satisfaction.xlsx'},
+  {cat:'practice-datasets',name:'AmazingMart Data Model',desc:'A multi-table retail dataset for practicing data modeling and relationships in Power BI.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/AmazingMart-Data-Model.xlsx'},
+  {cat:'practice-datasets',name:'Data Analysis PBI',desc:'A lightweight dataset for practicing core Power BI report-building fundamentals.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Data-Analysis-PBI.xlsx'},
+  {cat:'practice-datasets',name:'HR Employee Attrition',desc:'Employee records for practicing attrition analysis, retention trends, and HR reporting.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/HR-Employee-Attrition.xlsx'},
+  {cat:'practice-datasets',name:'Project Management Tracker',desc:'Project and task-level data for practicing project tracking and status reporting.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/Project-Management-selected-columns.xlsx'},
+  {cat:'practice-datasets',name:'Supply Chain Data',desc:'Supply chain operations data for practicing logistics and inventory analysis.',icon:'database',color:'#2563EB',bg:'rgba(37,99,235,.1)',count:'XLSX',downloadUrl:'assets/practice-dataset/supply_chain_data.xlsx'},
 
-  {
-    cat:'cheat-sheets',
-    name:'Excel Functions Cheat Sheet',
-    desc:'The 15 functions that cover 90% of everyday spreadsheet work — SUM, IF, VLOOKUP, INDEX+MATCH and more, with plain-English examples.',
-    icon:'file-text',
-    color:'#10B981',
-    bg:'rgba(16,185,129,.1)',
-    count:'2 pages · PDF',
-    diff:'Beginner',
-    diffClass:'bg2',
-    downloadUrl:'assets/pdfs/excel-functions-cheatsheet-beginner.pdf'
-  },
+  // ---------- CHEAT SHEETS (3) ----------
+  {cat:'cheat-sheets',name:'Excel Functions Cheat Sheet',desc:'The 15 functions that cover 90% of everyday spreadsheet work — SUM, IF, VLOOKUP, INDEX+MATCH and more, with plain-English examples.',icon:'file-text',color:'#10B981',bg:'rgba(16,185,129,.1)',count:'2 pages · PDF',diff:'Beginner',diffClass:'bg2',downloadUrl:'assets/pdfs/excel-functions-cheatsheet-beginner.pdf'},
+  {cat:'cheat-sheets',name:'DAX & Power Query Cheat Sheet',desc:'The bridge from Excel into Power BI — Power Query transformations plus core DAX functions like CALCULATE, SUMX, and time intelligence.',icon:'file-text',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',diff:'Intermediate',diffClass:'by',downloadUrl:'assets/pdfs/dax-powerquery-cheatsheet-intermediate.pdf'},
+  {cat:'cheat-sheets',name:'Statistical Analysis Cheat Sheet',desc:'The statistics concepts analysts actually need — correlation vs. causation, hypothesis testing, choosing the right test, and common traps.',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)',count:'3 pages · PDF',diff:'Advanced',diffClass:'bv',downloadUrl:'assets/pdfs/statistics-cheatsheet-advanced.pdf'},
 
-  {
-    cat:'cheat-sheets',
-    name:'DAX & Power Query Cheat Sheet',
-    desc:'The bridge from Excel into Power BI — Power Query transformations plus core DAX functions like CALCULATE, SUMX, and time intelligence.',
-    icon:'file-text',
-    color:'#F59E0B',
-    bg:'rgba(245,158,11,.1)',
-    count:'2 pages · PDF',
-    diff:'Intermediate',
-    diffClass:'by',
-    downloadUrl:'assets/pdfs/dax-powerquery-cheatsheet-intermediate.pdf'
-  },
+  // ---------- CASE STUDIES (3) ----------
+  {cat:'case-studies',name:'Diagnosing Customer Churn',desc:'A worked walkthrough of structuring a churn investigation — cohort analysis, isolating the real cause, and turning findings into a decision.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-customer-churn.pdf'},
+  {cat:'case-studies',name:'Reducing Stockouts Without Overstocking',desc:'ABC analysis applied to a real inventory problem — classifying 2,000 SKUs and fixing a one-size-fits-all reorder policy.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-supply-chain-stockouts.pdf'},
+  {cat:'case-studies',name:'Uncovering the Real Drivers of Attrition',desc:'Why the obvious theory (pay) is usually wrong, and the segmentation approach that finds what\'s actually driving employee turnover.',icon:'briefcase',color:'#F59E0B',bg:'rgba(245,158,11,.1)',count:'2 pages · PDF',downloadUrl:'assets/case-studies/case-study-hr-attrition.pdf'},
 
-  {
-    cat:'cheat-sheets',
-    name:'Statistical Analysis Cheat Sheet',
-    desc:'The statistics concepts analysts actually need — correlation vs. causation, hypothesis testing, choosing the right test, and common traps.',
-    icon:'file-text',
-    color:'#8B5CF6',
-    bg:'rgba(139,92,246,.1)',
-    count:'3 pages · PDF',
-    diff:'Advanced',
-    diffClass:'bv',
-    downloadUrl:'assets/pdfs/statistics-cheatsheet-advanced.pdf'
-  },
+  // ---------- DASHBOARD THEMES (4) ----------
+  {cat:'dashboard-themes',name:'Dark Mode Theme',desc:'A dark Power BI theme with high-contrast accent colors — matches modern dashboard aesthetics.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/dark-mode.json'},
+  {cat:'dashboard-themes',name:'Corporate Blue Theme',desc:'A clean, professional blue palette — ideal for executive reports and client-facing dashboards.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/corporate-blue.json'},
+  {cat:'dashboard-themes',name:'Vibrant Modern Theme',desc:'Bold, saturated colors for dashboards that need to stand out — presentations, marketing analytics.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/vibrant-modern.json'},
+  {cat:'dashboard-themes',name:'Soft Pastel Theme',desc:'A gentle, muted palette that\'s easy on the eyes for long-session dashboards and reports.',icon:'palette',color:'#EC4899',bg:'rgba(236,72,153,.1)',count:'JSON',downloadUrl:'assets/pbi-themes/soft-pastel.json'},
 
-  {
-    cat:'case-studies',
-    name:'Business Case Studies',
-    desc:'Step-by-step walkthroughs of real analytics business problems',
-    icon:'briefcase',
-    color:'#F59E0B',
-    bg:'rgba(245,158,11,.1)',
-    count:'5 cases'
-  },
-
-  {
-    cat:'dashboard-themes',
-    name:'Dashboard Themes',
-    desc:'Professionally designed Power BI and Excel color themes',
-    icon:'palette',
-    color:'#EC4899',
-    bg:'rgba(236,72,153,.1)',
-    count:'4 themes'
-  },
-
-  {
-    cat:'icon-packs',
-    name:'Icon Packs',
-    desc:'Analytics and business icon sets for your dashboards',
-    icon:'shapes',
-    color:'#06B6D4',
-    bg:'rgba(6,182,212,.1)',
-    count:'200+ icons'
-  }
+  // ---------- ICON PACK ----------
+  {cat:'icon-packs',name:'Icon Packs',desc:'Analytics and business icon sets for your dashboards',icon:'shapes',color:'#06B6D4',bg:'rgba(6,182,212,.1)',count:'200+ icons',downloadUrl:'assets/svg/icon-pack.zip'}
 ];
 
 function marketCardHtml(m, extra=''){
@@ -243,7 +194,7 @@ function marketCardHtml(m, extra=''){
   `;
 }
 
-
+// MARKETPLACE: shows everything (no slice)
 function renderMarket(f='all',s=''){
 
   const g=document.getElementById('market-grid');
@@ -275,6 +226,7 @@ function renderMarket(f='all',s=''){
 }
 
 
+// HOME PAGE: only the first 2 dashboards
 function renderHomeDashboards(){
 
   const g=document.getElementById('home-dashboards');
@@ -285,14 +237,12 @@ function renderHomeDashboards(){
 
   g.insertAdjacentHTML(
     'afterbegin',
-    MARKET.map((m,i)=>marketCardHtml(m, i===0 ? 'fi3' : 'fi3 fi3d'+Math.min(i,2))).join('')
+    MARKET.slice(0,2).map((m,i)=>marketCardHtml(m, i===0 ? 'fi3' : 'fi3 fi3d'+Math.min(i,2))).join('')
   );
 
   lucide.createIcons();
   obsv();
 }
-
-
 // ============================================================
 // FREE RESOURCES PAGE RENDERING
 // ============================================================
@@ -1719,6 +1669,79 @@ function initCTA(){
 
 }
 
+// ============================================================
+// FAQ (also injects FAQPage schema for Google rich results)
+// ============================================================
+
+const FAQS=[
+  {q:"What is The Analyst's Toolbox?",a:"The Analyst's Toolbox is a data analytics site by Terence Rebello. It has step-by-step Excel and Power BI chart tutorials, free resources, and ready-made Power BI dashboards."},
+  {q:"What are the Power BI dashboards and how much do they cost?",a:"They are interactive Power BI dashboards, such as the FIFA Goals Dashboard and the IPL 2024 Dashboard. Each costs ₹599 and is purchased through Gumroad. You can see details on the <a href=\"marketplace.html\">Marketplace</a> page."},
+  {q:"Are there free resources for learning data analytics?",a:"Yes. The <a href=\"free-resources.html\">Free Resources</a> page has Excel templates, practice datasets, cheat sheets, case studies, dashboard themes, and icon packs."},
+  {q:"Which charts and analysis techniques do the tutorials cover?",a:"The Toolbox covers charts such as Pareto, Histogram, Scatter Plot, Box Plot, and Waterfall, with more being added. Each tool is explained as a LinkedIn carousel. Open the <a href=\"toolbox.html\">Toolbox</a> to browse them."},
+  {q:"Do I need advanced Excel or Power BI skills to follow along?",a:"No. Each tool is labelled Beginner, Intermediate, or Advanced, so you can start at your level and work up."},
+  {q:"Can I hire you for a custom dashboard or Excel automation?",a:"Yes. Services include Power BI dashboards and reports, Excel automation, data cleaning, and business analytics. Use the <a href=\"#contact\">contact form</a> to share your requirements."},
+  {q:"How can I get in touch?",a:"Use the <a href=\"#contact\">contact form</a> on this page, or connect with Terence on LinkedIn using the link in the footer."}
+];
+
+function initFaq(){
+
+  const list=document.getElementById('faq-list');
+
+  if(!list)return;
+
+  list.innerHTML=FAQS.map((f,i)=>`
+    <div class="faq-item">
+      <h3>
+        <button class="faq-q" id="faq-q${i}" aria-expanded="false" aria-controls="faq-a${i}">
+          <span>${f.q}</span>
+          <span class="faq-ico" aria-hidden="true"><i data-lucide="plus"></i></span>
+        </button>
+      </h3>
+      <div class="faq-a" id="faq-a${i}" role="region" aria-labelledby="faq-q${i}">
+        <div class="faq-a-in"><p>${f.a}</p></div>
+      </div>
+    </div>
+  `).join('');
+
+  if(window.lucide)lucide.createIcons();
+
+  list.addEventListener('click',e=>{
+
+    const btn=e.target.closest('.faq-q');
+
+    if(!btn)return;
+
+    const item=btn.closest('.faq-item');
+    const open=!item.classList.contains('open');
+
+    item.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded',open);
+
+  });
+
+  // FAQPage structured data, built from the same FAQS array
+  if(!document.getElementById('faq-schema')){
+
+    const s=document.createElement('script');
+
+    s.type='application/ld+json';
+    s.id='faq-schema';
+
+    s.textContent=JSON.stringify({
+      '@context':'https://schema.org',
+      '@type':'FAQPage',
+      mainEntity:FAQS.map(f=>({
+        '@type':'Question',
+        name:f.q,
+        acceptedAnswer:{'@type':'Answer',text:f.a.replace(/<[^>]+>/g,'')}
+      }))
+    });
+
+    document.head.appendChild(s);
+  }
+
+}
+
 
 // ============================================================
 // WEB3FORMS CONTACT FORM
@@ -1916,6 +1939,8 @@ function init(){
   initCTA();
 
   initFooterYear();
+  
+  initFaq()
 
 
   // Final icons + animations
