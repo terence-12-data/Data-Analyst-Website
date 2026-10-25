@@ -369,11 +369,11 @@ const CMDS=[
   {l:'FIFA Goals Dashboard',d:'₹599 · Power BI',i:'layout-dashboard',h:'marketplace.html'},
   {l:'IPL 2024 Dashboard',d:'₹599 · Power BI',i:'layout-dashboard',h:'marketplace.html'},
   {l:'Learning Roadmap',d:'Beginner to Analytics Expert',i:'map',h:'#learning-path'},
-  {l:'LinkedIn',d:'Follow on LinkedIn',i:'linkedin',h:'https://linkedin.com/in/terencerebello'}
+  {l:'LinkedIn',d:'Follow on LinkedIn',i:'linkedin',h:'https://www.linkedin.com/in/terence-rebello/'}
 ];
 
 const RA=[
-  {title:'IPL 2024 Dashboard',meta:'Power BI · Added Jul 2025',icon:'layout-dashboard',color:'#F97316',bg:'rgba(249,115,22,.1)'},
+  {title:'IPL 2025 Dashboard',meta:'Power BI · Added Jul 2025',icon:'layout-dashboard',color:'#F97316',bg:'rgba(249,115,22,.1)'},
   {title:'Cohort Analysis Template',meta:'Excel · Added Jun 2025',icon:'table-2',color:'#10B981',bg:'rgba(16,185,129,.1)'},
   {title:'Power Query Cheat Sheet',meta:'PDF · Added May 2025',icon:'file-text',color:'#8B5CF6',bg:'rgba(139,92,246,.1)'}
 ];
@@ -1675,7 +1675,7 @@ function initCTA(){
 
 const FAQS=[
   {q:"What is The Analyst's Toolbox?",a:"The Analyst's Toolbox is a data analytics site by Terence Rebello. It has step-by-step Excel and Power BI chart tutorials, free resources, and ready-made Power BI dashboards."},
-  {q:"What are the Power BI dashboards and how much do they cost?",a:"They are interactive Power BI dashboards, such as the FIFA Goals Dashboard and the IPL 2024 Dashboard. Each costs ₹599 and is purchased through Gumroad. You can see details on the <a href=\"marketplace.html\">Marketplace</a> page."},
+  {q:"What are the Power BI dashboards and how much do they cost?",a:"They are interactive Power BI dashboards, such as the FIFA Goals Dashboard and the IPL 2025 Dashboard. Each costs ₹599 and is purchased through Gumroad. You can see details on the <a href=\"marketplace.html\">Marketplace</a> page."},
   {q:"Are there free resources for learning data analytics?",a:"Yes. The <a href=\"free-resources.html\">Free Resources</a> page has Excel templates, practice datasets, cheat sheets, case studies, dashboard themes, and icon packs."},
   {q:"Which charts and analysis techniques do the tutorials cover?",a:"The Toolbox covers charts such as Pareto, Histogram, Scatter Plot, Box Plot, and Waterfall, with more being added. Each tool is explained as a LinkedIn carousel. Open the <a href=\"toolbox.html\">Toolbox</a> to browse them."},
   {q:"Do I need advanced Excel or Power BI skills to follow along?",a:"No. Each tool is labelled Beginner, Intermediate, or Advanced, so you can start at your level and work up."},
