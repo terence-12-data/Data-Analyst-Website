@@ -37,7 +37,7 @@ const MARKET=[
     name:'FIFA Goals Dashboard',
     badge:'⚽ Football',
     badgeClass:'bg2',
-    img:'assets/images/fifa_dashboard.jpg',
+    img:'assets/images/fifa_dashboard',
     desc:'Interactive Power BI dashboard covering all goals analysis from 104 matches of the FIFA World Cup 2026.',
     features:[
       'Goals by time interval (0-15 to Extra Time)',
@@ -58,7 +58,7 @@ const MARKET=[
     name:'IPL 2025 Dashboard',
     badge:'🏏 Cricket',
     badgeClass:'bo',
-    img:'assets/images/ipl_dashboard.jpg',
+    img:'assets/images/ipl_dashboard',
     desc:'This interactive Power BI dashboard analyzes IPL six-hitting performance from 2008–2026, helping you explore how players compare in terms of total sixes, scoring efficiency, strike rate, and power-hitting impact.',
     features:[
       'Top run scorers & strike rates',
@@ -78,7 +78,7 @@ const MARKET=[
     name:'HR Attrition Dashboard',
     badge:'📊 HR Analytics',
     badgeClass:'bp',
-    img:'assets/images/hr_dashboard.png',
+    img:'assets/images/hr_dashboard',
     desc:'A plug-and-play HR attrition analytics dashboard. Breaks down employee turnover by department, overtime, age group, job role, salary band, and marital status across 1,480 employees.',
     features:[
       'Attrition rate by overtime, age & salary band',
@@ -141,12 +141,21 @@ const FREE_RESOURCES=[
   {cat:'icon-packs',name:'Icon Packs',desc:'Analytics and business icon sets for your dashboards',icon:'shapes',color:'#06B6D4',bg:'rgba(6,182,212,.1)',count:'200+ icons',downloadUrl:'assets/svg/icon-pack.zip'}
 ];
 
-function marketCardHtml(m, extra=''){
+function marketImgHtml(m, eager){
+  const b=m.img;
+  const load=eager?'fetchpriority="high"':'loading="lazy"';
+  return `<img src="${b}-800.webp"
+             srcset="${b}-480.webp 480w, ${b}-800.webp 800w"
+             sizes="(max-width:768px) 100vw, 400px"
+             width="800" height="450" alt="${m.name}" ${load} decoding="async" />`;
+}
+
+function marketCardHtml(m, extra='', eager=false){
   return `
     <div class="dc ${extra}">
 
       <div class="dp">
-        <img src="${m.img}" alt="${m.name}" loading="lazy" />
+        ${marketImgHtml(m, eager)}
         <div class="dpo"></div>
 
         <div class="dpb">
@@ -180,7 +189,7 @@ function marketCardHtml(m, extra=''){
               <i data-lucide="eye"></i> Preview
             </button>
 
-            <a href="${m.buyUrl}" target="_blank" rel="noopener" class="btn bp bsm" aria-label="Buy ${m.name}">
+            <a href="${m.buyUrl}" target="_blank" rel="noopener" class="btn bp bsm" aria-label="Buy Now: ${m.name}">
               <i data-lucide="shopping-cart"></i> Buy Now
             </a>
 
@@ -219,7 +228,7 @@ function renderMarket(f='all',s=''){
     return;
   }
 
-  g.innerHTML=fl.map(m=>marketCardHtml(m)).join('');
+  g.innerHTML=fl.map((m,i)=>marketCardHtml(m,'',i===0)).join('');
 
   lucide.createIcons();
   obsv();
@@ -605,7 +614,7 @@ function renderSkills(){
 
       <div class="skh">
         <span>${s.n}</span>
-        <span style="color:var(--accent)">${s.p}%</span>
+        <span style="color:var(--accent-t)">${s.p}%</span>
       </div>
 
       <div class="skt">
@@ -1436,7 +1445,7 @@ function runPromoModal(targetUrl) {
   const ringN = document.getElementById('promo-ring-n');
   const ringPrg = document.getElementById('promo-ring-prg');
 
-  if (img) { img.src = pick.img; img.alt = pick.name; }
+  if (img) { img.src = pick.img + '-480.webp'; img.alt = pick.name; }
   if (name) name.textContent = pick.name;
   if (desc) desc.textContent = pick.desc;
   if (cta && buyUrl) cta.href = buyUrl;
